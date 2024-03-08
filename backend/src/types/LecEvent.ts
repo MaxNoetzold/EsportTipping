@@ -27,14 +27,14 @@ export interface Strategy {
 }
 
 export interface Match {
-  id: string;
   flags: string[];
   teams: Team[];
   strategy: Strategy;
 }
 
 export interface GameEvent {
-  startTime: string;
+  matchId: string;
+  startTime: Date;
   state: string;
   type: string;
   blockName: string;

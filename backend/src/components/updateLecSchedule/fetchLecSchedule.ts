@@ -2,9 +2,10 @@
 
 import puppeteer, { HTTPResponse, HTTPRequest } from "puppeteer";
 import UserAgent from "user-agents";
-import { GameEvent } from "../types/LecEvent";
+import { GameEvent } from "../../types/LecEvent";
+import formatLecEvents from "./formatLecEvents.js";
 
-const getLecSchedule = async (): Promise<GameEvent[] | undefined> => {
+const fetchLecSchedule = async (): Promise<GameEvent[] | undefined> => {
   let data: GameEvent[] | undefined;
 
   // detect the getSchedule request, manipulate it and get the response
@@ -28,13 +29,7 @@ const getLecSchedule = async (): Promise<GameEvent[] | undefined> => {
     ) {
       try {
         const json = await response.json();
-        const events = (json?.data?.schedule?.events || []).map(
-          (event: any) => ({
-            ...event,
-            startTime: new Date(event.startTime),
-          })
-        );
-        data = events;
+        data = formatLecEvents(json?.data?.schedule?.events || []);
       } catch (err) {
         console.log("Error:", err);
       }
@@ -58,4 +53,4 @@ const getLecSchedule = async (): Promise<GameEvent[] | undefined> => {
   return data;
 };
 
-export default getLecSchedule;
+export default fetchLecSchedule;
