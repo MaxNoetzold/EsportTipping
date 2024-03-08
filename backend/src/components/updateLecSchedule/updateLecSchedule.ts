@@ -1,3 +1,4 @@
+import { writeFileSync } from "fs";
 import { GameEvent } from "../../types/LecEvent";
 import fetchLecSchedule from "./fetchLecSchedule.js";
 import updateLecMatchesInDatabase from "./updateLecMatchesInDatabase.js";

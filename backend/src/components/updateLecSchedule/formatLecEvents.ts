@@ -4,13 +4,14 @@ const formatLecEvents = (events: any[]) => {
   const lecEvents: GameEvent[] = [];
 
   for (const event of events) {
-    const startTime = new Date(event.startTime);
-    const matchId = event.match.id;
+    // Create a deep copy of the event object
+    const eventCopy = JSON.parse(JSON.stringify(event));
 
-    const newEvent = { ...event, startTime, matchId };
-    delete newEvent.match.id;
+    eventCopy.startTime = new Date(event.startTime);
+    eventCopy.matchId = event.match.id;
+    delete eventCopy.match.id;
 
-    lecEvents.push(newEvent);
+    lecEvents.push(eventCopy);
   }
 
   return lecEvents;
