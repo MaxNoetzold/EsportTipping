@@ -30,10 +30,17 @@ const LecMatchSchema = new Schema({
     flags: [String],
     teams: [TeamSchema],
     strategy: {
-      type: String,
       count: Number,
+      type: { type: String },
     },
   },
+});
+
+// TODO: Update all relating tips when a LecMatch is updated
+LecMatchSchema.post("updateOne", function (doc) {
+  // 'this' is the query that triggered the updateOne operation
+  // 'doc' is the document that was updated
+  // Call your specific function here
 });
 
 const LecMatchModel = mongoose.model("LecMatch", LecMatchSchema);
