@@ -1,4 +1,4 @@
-import LecMatchModel from "../../mongodb/schemas/LecMatch.js";
+import LecMatchModel from "../../mongodb/schemas/LecMatch";
 import { GameEvent } from "../../types/LecEvent";
 
 const updateLecMatchesInDatabase = async (lecMatches: GameEvent[]) => {

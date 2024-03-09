@@ -1,7 +1,6 @@
-import { writeFileSync } from "fs";
 import { GameEvent } from "../../types/LecEvent";
-import fetchLecSchedule from "./fetchLecSchedule.js";
-import updateLecMatchesInDatabase from "./updateLecMatchesInDatabase.js";
+import fetchLecSchedule from "./fetchLecSchedule";
+import updateLecMatchesInDatabase from "./updateLecMatchesInDatabase";
 
 const START_DATE_SPRING_2024 = new Date("2024-03-09T00:00:00Z");
 

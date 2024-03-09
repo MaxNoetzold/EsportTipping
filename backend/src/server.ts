@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import updateLecSchedule from "./components/updateLecSchedule/updateLecSchedule.js";
+import updateLecSchedule from "./components/updateLecSchedule/updateLecSchedule";
 
 const app = express();
 const port = 3000;

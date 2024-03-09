@@ -1,3 +1,3 @@
-import updateLecSchedule from "./updateLecSchedule.js";
+import updateLecSchedule from "./updateLecSchedule";
 
 export default updateLecSchedule;
