@@ -1,5 +1,8 @@
 import express, { Request, Response } from "express";
-import updateLecSchedule from "./components/updateLecSchedule/updateLecSchedule";
+import updateLecSchedule from "./components/updateLecSchedule";
+import fs from "fs";
+import formatLecEvents from "./components/updateLecSchedule/formatLecEvents";
+import path from "path";
 
 const app = express();
 const port = 3000;

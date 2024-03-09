@@ -3,14 +3,13 @@ import fs from "fs";
 import path from "path";
 import updateLecMatchesInDatabase from "../updateLecMatchesInDatabase";
 import LecMatchModel from "../../../mongodb/schemas/LecMatch";
-import deepEqual from "deep-equal";
 
 // Test the updateLecMatchesInDatabase function
 it("should update the database with the provided LEC matches", async () => {
   // Read the LEC matches from the JSON file
   const lecMatches = JSON.parse(
     fs.readFileSync(
-      path.resolve(__dirname, "springSplit2024RegularSchedule.json"),
+      path.resolve(__dirname, "formattedSpringSplit2024RegularSchedule.json"),
       "utf-8"
     )
   );
@@ -22,8 +21,15 @@ it("should update the database with the provided LEC matches", async () => {
   for (const lecMatch of lecMatches) {
     const matchInDb = await LecMatchModel.findOne({
       matchId: lecMatch.matchId,
-    });
+    }).lean();
     expect(matchInDb).toBeDefined();
-    expect(deepEqual(matchInDb, lecMatch)).toBe(true);
+
+    // Remove _id properties from matchInDb and its nested objects
+    const matchInDbWithoutIds = JSON.parse(
+      JSON.stringify(matchInDb),
+      (key, value) => (key === "_id" ? undefined : value)
+    );
+
+    expect(matchInDbWithoutIds).toMatchObject(lecMatch);
   }
 });

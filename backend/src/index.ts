@@ -5,7 +5,9 @@ import connectToDatabase from "./mongodb/connectToDatabase";
 
 console.log("Start Server");
 
+console.log("Connecting to the database");
 await connectToDatabase();
+console.log("Connected to the database");
 
 const port = process.env.PORT || 3000;
 expressApp.listen(port, () => {
