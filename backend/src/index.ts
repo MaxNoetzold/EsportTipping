@@ -1,7 +1,7 @@
 import "dotenv/config";
 
 import expressApp from "./server";
-import connectToDatabase from "./mongodb/connectToDatabase";
+import connectToDatabase from "./utils/mongodb/connectToDatabase";
 
 console.log("Start Server");
 

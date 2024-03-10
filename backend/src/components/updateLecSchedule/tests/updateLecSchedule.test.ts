@@ -1,9 +1,8 @@
-import { GameEvent } from "../../../types/LecEvent";
 import fetchLecSchedule from "../fetchLecSchedule";
 import updateLecMatchesInDatabase from "../updateLecMatchesInDatabase";
 import updateLecSchedule from "../updateLecSchedule";
-import fs from "fs";
-import path from "path";
+import unfilteredLecScheduleJSON from "../../../test/exampleData/formattedUnfilteredLecSchedule.json";
+import { GameEvent } from "../../../utils/types/LecEvent";
 
 jest.mock("../fetchLecSchedule", () => ({
   __esModule: true,
@@ -18,10 +17,7 @@ jest.mock("../updateLecMatchesInDatabase", () => ({
 describe("updateLecSchedule tests", () => {
   it("should filter events and update database", async () => {
     const unfilteredLecSchedule: GameEvent[] = JSON.parse(
-      fs.readFileSync(
-        path.resolve(__dirname, "unfilteredLecSchedule.json"),
-        "utf-8"
-      )
+      JSON.stringify(unfilteredLecScheduleJSON)
     );
     (fetchLecSchedule as jest.Mock).mockResolvedValue(unfilteredLecSchedule);
     (updateLecMatchesInDatabase as jest.Mock).mockResolvedValue(undefined);

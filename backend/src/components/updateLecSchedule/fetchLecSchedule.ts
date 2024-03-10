@@ -2,7 +2,7 @@
 
 import puppeteer, { HTTPResponse, HTTPRequest } from "puppeteer";
 import UserAgent from "user-agents";
-import { GameEvent } from "../../types/LecEvent";
+import { GameEvent } from "../../utils/types/LecEvent";
 import formatLecEvents from "./formatLecEvents";
 
 const fetchLecSchedule = async (): Promise<GameEvent[] | undefined> => {

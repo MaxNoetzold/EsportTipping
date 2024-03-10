@@ -1,16 +1,12 @@
 import formatLecEvents from "../formatLecEvents";
-import { GameEvent } from "../../../types/LecEvent";
-import fs from "fs";
-import path from "path";
-import LecMatchModel from "../../../mongodb/schemas/LecMatch";
+import { GameEvent } from "../../../utils/types/LecEvent";
+import LecMatchModel from "../../../utils/mongodb/schemas/LecMatch";
+import springSplit2024RegularSchedule from "../../../test/exampleData/springSplit2024RegularSchedule.json";
 
 it("should correctly format events", () => {
-  // Read data from JSON file
-  const rawData = fs.readFileSync(
-    path.resolve(__dirname, "springSplit2024RegularSchedule.json"),
-    "utf-8"
+  const events: any[] = JSON.parse(
+    JSON.stringify(springSplit2024RegularSchedule)
   );
-  const events: any[] = JSON.parse(rawData);
   // only keep the first 10 events
   events.splice(10);
 

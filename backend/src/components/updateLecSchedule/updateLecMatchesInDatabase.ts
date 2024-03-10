@@ -1,5 +1,5 @@
-import LecMatchModel from "../../mongodb/schemas/LecMatch";
-import { GameEvent } from "../../types/LecEvent";
+import LecMatchModel from "../../utils/mongodb/schemas/LecMatch";
+import { GameEvent } from "../../utils/types/LecEvent";
 
 const updateLecMatchesInDatabase = async (lecMatches: GameEvent[]) => {
   const bulkOps = lecMatches.map((lecMatch) => ({

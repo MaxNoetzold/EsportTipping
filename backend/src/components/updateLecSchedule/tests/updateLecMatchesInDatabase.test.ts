@@ -1,17 +1,11 @@
-// Import necessary modules
-import fs from "fs";
-import path from "path";
 import updateLecMatchesInDatabase from "../updateLecMatchesInDatabase";
-import LecMatchModel from "../../../mongodb/schemas/LecMatch";
+import LecMatchModel from "../../../utils/mongodb/schemas/LecMatch";
+import formattedSpringSplit2024RegularSchedule from "../../../test/exampleData/formattedSpringSplit2024RegularSchedule.json";
+import { GameEvent } from "../../../utils/types/LecEvent";
 
-// Test the updateLecMatchesInDatabase function
 it("should update the database with the provided LEC matches", async () => {
-  // Read the LEC matches from the JSON file
-  const lecMatches = JSON.parse(
-    fs.readFileSync(
-      path.resolve(__dirname, "formattedSpringSplit2024RegularSchedule.json"),
-      "utf-8"
-    )
+  const lecMatches: GameEvent[] = JSON.parse(
+    JSON.stringify(formattedSpringSplit2024RegularSchedule)
   );
 
   // Call the function to update the database
