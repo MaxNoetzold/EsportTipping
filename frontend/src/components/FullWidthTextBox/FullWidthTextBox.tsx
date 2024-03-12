@@ -5,31 +5,16 @@
 
 function FullWidthTextBox({
   text,
-  size,
-  color,
+  textClassName,
 }: {
   text: string;
-  size:
-    | "xs"
-    | "sm"
-    | "base"
-    | "lg"
-    | "xl"
-    | "2xl"
-    | "3xl"
-    | "4xl"
-    | "5xl"
-    | "6xl"
-    | "7xl"
-    | "8xl"
-    | "9xl";
-  color: string; // TailwindCSS color
+  textClassName?: string;
 }) {
   const characters = text.split("");
   return (
     <div className="flex justify-between w-full">
       {characters.map((char, i) => (
-        <div key={i} className={`text-${size} text-${color}`}>
+        <div key={i} className={textClassName}>
           {char}
         </div>
       ))}

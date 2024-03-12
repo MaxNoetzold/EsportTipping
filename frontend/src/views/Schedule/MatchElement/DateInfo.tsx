@@ -14,8 +14,14 @@ function DateInfo({ date }: { date: Date }) {
 
   return (
     <div className="flex flex-col items-center w-20">
-      <FullWidthTextBox text={formattedDate} size="base" color="gray-500" />
-      <FullWidthTextBox text={formattedTime} size="2xl" color="white" />
+      <FullWidthTextBox
+        text={formattedDate}
+        textClassName="text-base text-gray-500"
+      />
+      <FullWidthTextBox
+        text={formattedTime}
+        textClassName="text-2xl text-white"
+      />
     </div>
   );
 }

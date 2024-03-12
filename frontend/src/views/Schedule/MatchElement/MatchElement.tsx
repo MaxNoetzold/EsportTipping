@@ -3,7 +3,6 @@ import DateInfo from "./DateInfo";
 import Teams from "./Teams";
 
 function MatchElement({ match }: { match: GameEvent }) {
-  console.log(match);
   const {
     startTime,
     match: { teams },
