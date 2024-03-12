@@ -5,6 +5,16 @@ import connectToDatabase from "./utils/mongodb/connectToDatabase";
 
 console.log("Start Server");
 
+// Check the environment variables
+if (!process.env.MONGODB_URI) {
+  console.error("MONGODB_URI is not set");
+  process.exit(1);
+}
+if (!process.env.DEV_FRONTEND_IPS) {
+  console.error("DEV_FRONTEND_IPS is not set");
+  process.exit(1);
+}
+
 console.log("Connecting to the database");
 await connectToDatabase();
 console.log("Connected to the database");

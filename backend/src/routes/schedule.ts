@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import updateLecSchedule from "../components/updateLecSchedule";
 import getLecScheduleForSplit, {
   getCurrentSplit,
@@ -6,12 +6,16 @@ import getLecScheduleForSplit, {
 
 const router = express.Router();
 
-router.get("/:split?", async (req: Request, res: Response) => {
-  const { split = getCurrentSplit() } = req.params;
+router.get("/", async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { split = getCurrentSplit() } = req.query as { split?: string };
 
-  const matches = await getLecScheduleForSplit(split);
+    const matches = await getLecScheduleForSplit(split);
 
-  res.status(200).json(matches);
+    res.status(200).json(matches);
+  } catch (error) {
+    next(error);
+  }
 });
 
 // Get latest data from lolesports and update the database
