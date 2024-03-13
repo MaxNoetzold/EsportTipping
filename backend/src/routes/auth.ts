@@ -118,12 +118,14 @@ loginRouter.get(
         return res.status(400).send({ message: "Invalid user response" });
       }
 
+      const sessionMaxAge = 7 * 24 * 60 * 60 * 1000; // One week
+
       // store session in database
       const newSession = new SessionModel({
-        oauthState: stateParam,
-        access_token: oauthData.access_token,
-        refresh_token: oauthData.refresh_token,
-        expires_at: Date.now() + oauthData.expires_in * 1000,
+        accessToken: oauthData.access_token,
+        refreshToken: oauthData.refresh_token,
+        discordExpiresAt: Date.now() + oauthData.expires_in * 1000,
+        sessionExpiresAt: new Date(Date.now() + sessionMaxAge),
         discordUserId: userData.id,
       });
       await newSession.save();
@@ -134,11 +136,18 @@ loginRouter.get(
         {
           discordUserId: userData.id,
           username: userData.username,
-          global_name: userData.global_name,
+          globalName: userData.global_name,
           avatar: userData.avatar,
         },
         { upsert: true }
-      );
+      ).exec();
+
+      // add session cookie to the response
+      res.cookie("session", newSession._id, {
+        maxAge: sessionMaxAge,
+        httpOnly: true,
+        signed: true,
+      });
 
       // redirect the user to the frontend
       res.redirect(`${process.env.FRONTEND_URL}/`);
