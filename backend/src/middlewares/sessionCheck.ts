@@ -1,8 +1,9 @@
-import { Request, Response, NextFunction } from "express";
+import { Response, NextFunction } from "express";
 import SessionModel from "../utils/mongodb/schemas/Session";
 import UserModel from "../utils/mongodb/schemas/User";
+import Request from "../utils/types/RequestWithSessionAndUser";
 
-const authCheckMiddleware = async (
+const sessionCheckMiddleware = async (
   req: Request,
   res: Response,
   next: NextFunction
@@ -30,4 +31,4 @@ const authCheckMiddleware = async (
   next();
 };
 
-export default authCheckMiddleware;
+export default sessionCheckMiddleware;

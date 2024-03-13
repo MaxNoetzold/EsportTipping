@@ -1,8 +1,9 @@
-import express, { NextFunction, Request, Response } from "express";
+import express, { NextFunction, Response } from "express";
 import { request } from "undici";
 import { nanoid } from "nanoid";
 import SessionModel from "../utils/mongodb/schemas/Session";
 import UserModel from "../utils/mongodb/schemas/User";
+import Request from "../utils/types/RequestWithSessionAndUser";
 
 const loginRouter = express.Router();
 
@@ -147,6 +148,7 @@ loginRouter.get(
       // add session cookie to the response
       res.cookie("session", newSession._id, {
         maxAge: sessionMaxAge,
+        signed: true,
         httpOnly: true,
         // TODO: change to strict in production
         sameSite: "none",
@@ -165,27 +167,11 @@ loginRouter.get(
   "/@me",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const sessionCookie = req.cookies.session;
-
-      if (!sessionCookie) {
+      if (!req.user) {
         return res.status(401).send({ message: "Unauthorized" });
       }
 
-      const session = await SessionModel.findById(sessionCookie).lean();
-
-      if (!session) {
-        return res.status(401).send({ message: "Unauthorized" });
-      }
-
-      const user = await UserModel.findOne({
-        discordUserId: session.discordUserId,
-      }).lean();
-
-      if (!user) {
-        return res.status(404).send({ message: "User not found" });
-      }
-
-      res.send(user);
+      res.send(req.user);
     } catch (error) {
       next(error);
     }

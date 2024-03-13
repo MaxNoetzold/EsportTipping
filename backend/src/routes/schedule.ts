@@ -1,8 +1,9 @@
-import express, { NextFunction, Request, Response } from "express";
+import express, { NextFunction, Response } from "express";
 import updateLecSchedule from "../components/updateLecSchedule";
 import getLecScheduleForSplit, {
   getCurrentSplit,
 } from "../components/getLecSchedule";
+import Request from "../utils/types/RequestWithSessionAndUser";
 
 const router = express.Router();
 

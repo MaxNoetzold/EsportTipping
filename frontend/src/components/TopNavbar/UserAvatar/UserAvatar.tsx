@@ -8,6 +8,8 @@ function UserAvatar() {
     queryFn: getMeApi,
   });
 
+  // https://cdn.discordapp.com/avatars/user_id/avatar_id.png
+
   if (!data) {
     return <LoginButton />;
   }
