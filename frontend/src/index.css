@@ -12,3 +12,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.discordButton {
+  background-color: #5865f2;
+  &:hover {
+    background-color: #8891f2;
+  }
+}

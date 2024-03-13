@@ -8,8 +8,13 @@ function TopNavbar() {
       <div className="text-white text-2xl">LEC Spring Split 2024</div>
       <button
         onClick={handleLoginClick}
-        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        className="discordButton text-white font-bold py-2 px-4 rounded"
       >
+        <img
+          src="/discord-mark-white.png"
+          alt="Discord logo"
+          className="inline-block mr-2 h-5"
+        />
         Login
       </button>
     </div>
