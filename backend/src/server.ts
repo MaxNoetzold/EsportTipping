@@ -1,7 +1,12 @@
 import express, { NextFunction, Request, Response } from "express";
+import cookieParser from "cookie-parser";
 import scheduleRouter from "./routes/schedule";
+import authRouter from "./routes/auth";
 
 const app = express();
+
+// add middlewares
+app.use(cookieParser(process.env.COOKIE_SECRET));
 
 // TODO: This is only for development, we should remove this in production -> Find a way to deactive this in production
 app.use("*", (req: Request, res: Response, next: NextFunction) => {
@@ -30,6 +35,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/schedule", scheduleRouter);
+app.use("/api/auth", authRouter);
 
 // General error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

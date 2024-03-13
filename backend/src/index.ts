@@ -14,6 +14,10 @@ if (!process.env.DEV_FRONTEND_IPS) {
   console.error("DEV_FRONTEND_IPS is not set");
   process.exit(1);
 }
+if (!process.env.DISCORD_AUTH_REDIRECT) {
+  console.error("DISCORD_AUTH_REDIRECT is not set");
+  process.exit(1);
+}
 
 console.log("Connecting to the database");
 await connectToDatabase();
