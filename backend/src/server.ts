@@ -17,7 +17,7 @@ app.use("*", (req: Request, res: Response, next: NextFunction) => {
   // Request headers you wish to allow
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type,Authorization"
+    "X-Requested-With,content-type"
   );
   // Request methods you wish to allow
   res.setHeader(

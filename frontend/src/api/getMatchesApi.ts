@@ -1,14 +1,12 @@
-import axios from "axios";
+import { getAPI } from ".";
 
 const getMatchesApi = async (splitName: string) => {
-  const response = await axios.get(
-    `${import.meta.env.VITE_BACKEND_URL}/api/schedule`,
-    {
-      params: {
-        split: splitName,
-      },
-    }
-  );
+  const api = getAPI();
+  const response = await api.get("/api/schedule", {
+    params: {
+      split: splitName,
+    },
+  });
   return response.data;
 };
 

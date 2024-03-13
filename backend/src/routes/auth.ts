@@ -53,6 +53,8 @@ loginRouter.get(
       //Extracting state parameter previously signed and stored in cookies
       const { stateParam } = req.signedCookies;
 
+      console.log("stateParam", stateParam);
+
       //Comparing state parameters
       if (state !== stateParam) {
         // throwing unprocessable entity error
@@ -146,11 +148,44 @@ loginRouter.get(
       res.cookie("session", newSession._id, {
         maxAge: sessionMaxAge,
         httpOnly: true,
-        signed: true,
+        // TODO: change to strict in production
+        sameSite: "none",
+        secure: true,
       });
 
       // redirect the user to the frontend
-      res.redirect(`${process.env.FRONTEND_URL}/`);
+      res.redirect(`${process.env.FRONTEND_URL}`);
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
+loginRouter.get(
+  "/@me",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const sessionCookie = req.cookies.session;
+
+      if (!sessionCookie) {
+        return res.status(401).send({ message: "Unauthorized" });
+      }
+
+      const session = await SessionModel.findById(sessionCookie).lean();
+
+      if (!session) {
+        return res.status(401).send({ message: "Unauthorized" });
+      }
+
+      const user = await UserModel.findOne({
+        discordUserId: session.discordUserId,
+      }).lean();
+
+      if (!user) {
+        return res.status(404).send({ message: "User not found" });
+      }
+
+      res.send(user);
     } catch (error) {
       next(error);
     }
