@@ -6,6 +6,7 @@ interface Session {
   discordExpiresAt: number;
   discordUserId: string;
   sessionExpiresAt: Date;
+  _id: string;
 }
 
 interface User {
@@ -13,6 +14,7 @@ interface User {
   username: string;
   globalName: string;
   avatar: string;
+  _id: string;
 }
 
 interface Request extends ExpressRequest {

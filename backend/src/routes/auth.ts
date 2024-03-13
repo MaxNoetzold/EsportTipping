@@ -5,47 +5,44 @@ import SessionModel from "../utils/mongodb/schemas/Session";
 import UserModel from "../utils/mongodb/schemas/User";
 import Request from "../utils/types/RequestWithSessionAndUser";
 
-const loginRouter = express.Router();
+const authRouter = express.Router();
 
-loginRouter.get(
-  "/",
-  async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      // check environment variables
-      if (!process.env.DISCORD_AUTH_REDIRECT) {
-        throw new Error("DISCORD_AUTH_REDIRECT is not set");
-      }
-      if (!process.env.DISCORD_CLIENT_ID) {
-        throw new Error("DISCORD_CLIENT_ID is not set");
-      }
-
-      // create a state (random string) to protect against CSRF attacks
-      // good explanation: https://stateful.com/blog/oauth-state-parameters-nodejs
-      const stateParam = nanoid(20);
-      //store state parameter in cookie, set maxAge, and set signed to true
-      res.cookie("stateParam", stateParam, {
-        maxAge: 1000 * 60 * 5,
-        signed: true,
-        httpOnly: true,
-      });
-
-      // redirect the user to the OAuth2 server using the generated state
-      // the user will be redirected back to the /callback route with the state and access tokens
-      const redirectQueries = new URLSearchParams({
-        state: stateParam,
-        client_id: process.env.DISCORD_CLIENT_ID,
-        response_type: "code",
-        redirect_uri: process.env.DISCORD_AUTH_REDIRECT,
-        scope: "identify",
-      }).toString();
-      res.redirect(`https://discord.com/oauth2/authorize?${redirectQueries}`);
-    } catch (error) {
-      next(error);
+authRouter.get("/", async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    // check environment variables
+    if (!process.env.DISCORD_AUTH_REDIRECT) {
+      throw new Error("DISCORD_AUTH_REDIRECT is not set");
     }
-  }
-);
+    if (!process.env.DISCORD_CLIENT_ID) {
+      throw new Error("DISCORD_CLIENT_ID is not set");
+    }
 
-loginRouter.get(
+    // create a state (random string) to protect against CSRF attacks
+    // good explanation: https://stateful.com/blog/oauth-state-parameters-nodejs
+    const stateParam = nanoid(20);
+    //store state parameter in cookie, set maxAge, and set signed to true
+    res.cookie("stateParam", stateParam, {
+      maxAge: 1000 * 60 * 5,
+      signed: true,
+      httpOnly: true,
+    });
+
+    // redirect the user to the OAuth2 server using the generated state
+    // the user will be redirected back to the /callback route with the state and access tokens
+    const redirectQueries = new URLSearchParams({
+      state: stateParam,
+      client_id: process.env.DISCORD_CLIENT_ID,
+      response_type: "code",
+      redirect_uri: process.env.DISCORD_AUTH_REDIRECT,
+      scope: "identify",
+    }).toString();
+    res.redirect(`https://discord.com/oauth2/authorize?${redirectQueries}`);
+  } catch (error) {
+    next(error);
+  }
+});
+
+authRouter.get(
   "/callback",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -53,8 +50,6 @@ loginRouter.get(
 
       //Extracting state parameter previously signed and stored in cookies
       const { stateParam } = req.signedCookies;
-
-      console.log("stateParam", stateParam);
 
       //Comparing state parameters
       if (state !== stateParam) {
@@ -163,7 +158,7 @@ loginRouter.get(
   }
 );
 
-loginRouter.get(
+authRouter.get(
   "/@me",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -178,4 +173,29 @@ loginRouter.get(
   }
 );
 
-export default loginRouter;
+authRouter.delete(
+  "/",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      console.log("logout");
+      if (!req.session) {
+        return res.status(400).send({ message: "No session found" });
+      }
+
+      await SessionModel.findByIdAndDelete(req.session._id).exec();
+
+      // delete cookie by overwriting it with maxAge = 0
+      res.cookie("session", null, {
+        maxAge: 0,
+        signed: true,
+        httpOnly: true,
+        sameSite: "none",
+        secure: true,
+      });
+      res.send({ message: "Logged out" });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+export default authRouter;
