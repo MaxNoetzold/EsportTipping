@@ -3,12 +3,14 @@ import cookieParser from "cookie-parser";
 import scheduleRouter from "./routes/schedule";
 import authRouter from "./routes/auth";
 import sessionCheckMiddleware from "./middlewares/sessionCheck";
+import routeLogger from "./middlewares/routeLogger";
 
 const app = express();
 
 // add middlewares
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(sessionCheckMiddleware);
+app.use(routeLogger);
 
 // TODO: This is only for development, we should remove this in production -> Find a way to deactive this in production
 app.use("*", (req: Request, res: Response, next: NextFunction) => {
