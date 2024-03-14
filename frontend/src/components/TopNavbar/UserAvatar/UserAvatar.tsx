@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import getMeApi from "../../../api/getMeApi";
-import LoginButton from "./LoginButton";
-import { useState } from "react";
 import logoutApi from "../../../api/logoutApi";
+import LoginButton from "./LoginButton";
 
 function UserAvatar() {
   const [showPopdown, setShowPopdown] = useState(false);
@@ -13,6 +13,8 @@ function UserAvatar() {
     queryKey: ["user", "me"],
     queryFn: getMeApi,
   });
+
+  console.log(data);
 
   const handleLogout = async () => {
     if (logoutState !== "loading") {
