@@ -8,27 +8,32 @@ const sessionCheckMiddleware = async (
   res: Response,
   next: NextFunction
 ) => {
-  const sessionCookie = req.signedCookies.session;
+  try {
+    const sessionCookie = req.signedCookies.session;
 
-  if (sessionCookie) {
-    const session = await SessionModel.findById(sessionCookie).lean();
+    if (sessionCookie) {
+      const session = await SessionModel.findById(sessionCookie).lean();
 
-    if (session) {
-      // Attach the session to the request object for further use
-      req.session = session;
+      if (session) {
+        // Attach the session to the request object for further use
+        req.session = session;
 
-      const user = await UserModel.findOne({
-        discordUserId: session.discordUserId,
-      }).lean();
+        const user = await UserModel.findOne({
+          discordUserId: session.discordUserId,
+        }).lean();
 
-      if (user) {
-        // Attach the user to the request object for further use
-        req.user = user;
+        if (user) {
+          // Attach the user to the request object for further use
+          req.user = user;
+        }
       }
     }
-  }
 
-  next();
+    next();
+  } catch (error) {
+    console.log("sessionCheckMiddleware", error);
+    next(error);
+  }
 };
 
 export default sessionCheckMiddleware;

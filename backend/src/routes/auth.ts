@@ -177,7 +177,6 @@ authRouter.delete(
   "/",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      console.log("logout");
       if (!req.session) {
         return res.status(400).send({ message: "No session found" });
       }

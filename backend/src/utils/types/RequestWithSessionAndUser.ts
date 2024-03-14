@@ -1,4 +1,5 @@
 import { Request as ExpressRequest } from "express";
+import mongoose from "mongoose";
 
 interface Session {
   accessToken: string;
@@ -6,7 +7,7 @@ interface Session {
   discordExpiresAt: number;
   discordUserId: string;
   sessionExpiresAt: Date;
-  _id: string;
+  _id: mongoose.Types.ObjectId;
 }
 
 interface User {
@@ -14,7 +15,7 @@ interface User {
   username: string;
   globalName: string;
   avatar: string;
-  _id: string;
+  _id: mongoose.Types.ObjectId;
 }
 
 interface Request extends ExpressRequest {
