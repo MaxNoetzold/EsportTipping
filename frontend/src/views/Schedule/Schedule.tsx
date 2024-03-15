@@ -1,38 +1,43 @@
 import { useQuery } from "@tanstack/react-query";
 import getMatchesApi from "../../api/getMatchesApi";
 import Loading from "../../components/Loading";
-import Alert from "../../components/Alert";
 import MatchElement from "./MatchElement/MatchElement";
 import { GameEvent } from "../../types/LecEvent";
 import getMatchTipsApi from "../../api/getMatchTipsApi";
+import { useErrorSnackbar } from "../../components/ErrorSnackbar";
+import { useEffect } from "react";
 
 function Schedule() {
+  const showError = useErrorSnackbar();
+
   const {
     isPending,
-    isError,
     data: matches,
-    error,
+    error: matchesError,
   } = useQuery({
     queryKey: ["matches", "spring"],
     queryFn: () => getMatchesApi("2024_spring"),
   });
-  const {
-    data: tips,
-    // error: tipsError,
-  } = useQuery({
+  const { data: tips, error: tipsError } = useQuery({
     queryKey: ["tips", "spring", "me"],
     queryFn: () => getMatchTipsApi("2024_spring"),
   });
+
+  useEffect(() => {
+    if (matchesError) {
+      console.log(matchesError);
+      showError(matchesError.message);
+    }
+    if (tipsError) {
+      showError(tipsError.message);
+    }
+  }, [matchesError, tipsError, showError]);
 
   if (isPending) {
     return <Loading />;
   }
 
-  if (isError && error) {
-    return <Alert message={error.message} />;
-  }
-
-  const matchesWithTips = matches.map((match: GameEvent) => {
+  const matchesWithTips = (matches || []).map((match: GameEvent) => {
     const tip = tips?.find((t) => t.matchId === match.matchId);
     return { ...match, tip };
   });

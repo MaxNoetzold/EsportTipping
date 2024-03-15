@@ -5,9 +5,11 @@ import "./MatchTip.css";
 import SvgTipFilter from "./SvgTipFilter";
 import { useEffect, useState } from "react";
 import postMatchTipApi from "../../../../api/postMatchTipApi";
+import { useErrorSnackbar } from "../../../../components/ErrorSnackbar";
 
 function MatchTip({ match }: { match: GameEventWithTip }) {
   const queryClient = useQueryClient();
+  const showError = useErrorSnackbar();
 
   const [tippedTeam, setTippedTeam] = useState<string | null>(null);
   const {
@@ -30,13 +32,13 @@ function MatchTip({ match }: { match: GameEventWithTip }) {
     mutationFn: (teamCode: string) => postMatchTipApi(match.matchId, teamCode),
     onMutate: (teamCode: string) => {
       if (!user) {
-        throw { message: "You must be logged in to tip" };
+        throw new Error("You must be logged in to tip");
       }
       setTippedTeam(teamCode);
       return tippedTeam;
     },
     onError: (error, variables, context) => {
-      // TODO: Show error as notification
+      showError(error.message);
       if (context) {
         setTippedTeam(context);
       } else {

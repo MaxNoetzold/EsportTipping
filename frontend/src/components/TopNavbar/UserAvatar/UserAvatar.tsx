@@ -1,18 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import getMeApi from "../../../api/getMeApi";
 import logoutApi from "../../../api/logoutApi";
 import LoginButton from "./LoginButton";
+import { useErrorSnackbar } from "../../ErrorSnackbar";
 
 function UserAvatar() {
+  const queryClient = useQueryClient();
+  const showError = useErrorSnackbar();
   const [showPopdown, setShowPopdown] = useState(false);
   const [logoutState, setLogoutState] = useState("idle");
-  const queryClient = useQueryClient();
 
-  const { data } = useQuery({
+  const { data: user, error: userError } = useQuery({
     queryKey: ["user", "me"],
     queryFn: getMeApi,
   });
+
+  useEffect(() => {
+    if (userError) {
+      showError(userError.message);
+    }
+  }, [userError, showError]);
 
   const handleLogout = async () => {
     if (logoutState !== "loading") {
@@ -27,14 +35,14 @@ function UserAvatar() {
     setShowPopdown(!showPopdown);
   };
 
-  if (!data) {
+  if (!user) {
     return <LoginButton />;
   }
 
   return (
     <div className="relative">
       <img
-        src={`https://cdn.discordapp.com/avatars/${data.discordUserId}/${data.avatar}.png`}
+        src={`https://cdn.discordapp.com/avatars/${user.discordUserId}/${user.avatar}.png`}
         alt="User Avatar"
         className="w-12 h-12 rounded-full cursor-pointer"
         onClick={togglePopdown}
