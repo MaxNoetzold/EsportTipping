@@ -5,6 +5,7 @@ import Request, {
 } from "../utils/types/RequestWithSessionAndUser";
 import userCheckMiddleware from "../middlewares/userCheck";
 import getMatchTipsForSplit from "../components/getMatchTipsForSplit";
+import postMatchTip from "../components/postMatchTip";
 
 const tippingRouter = express.Router();
 
@@ -36,7 +37,9 @@ tippingRouter.post(
       const { matchId, teamId } = (req as AuthedRequest).body;
       const { discordUserId } = (req as AuthedRequest).user;
 
-      res.status(200).json();
+      const newTip = await postMatchTip(matchId, teamId, discordUserId);
+
+      res.status(200).json(newTip);
     } catch (error) {
       next(error);
     }
