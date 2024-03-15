@@ -6,7 +6,7 @@ const getMatchTipsForSplit = async (
   discordUserId: string
 ) => {
   const matches = await getLecScheduleForSplit(splitName);
-  const matchIds = matches.map((match) => match.id);
+  const matchIds = matches.map((match) => match.matchId);
 
   const tips = await MatchTipModel.find({
     discordUserId,

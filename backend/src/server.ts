@@ -4,11 +4,14 @@ import scheduleRouter from "./routes/schedule";
 import authRouter from "./routes/auth";
 import sessionCheckMiddleware from "./middlewares/sessionCheck";
 import routeLogger from "./middlewares/routeLogger";
+import tippingRouter from "./routes/tipping";
+import bodyParser from "body-parser";
 
 const app = express();
 
 // add middlewares
 app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(bodyParser.json());
 app.use(sessionCheckMiddleware);
 app.use(routeLogger);
 
@@ -40,6 +43,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api/schedule", scheduleRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/tipping", tippingRouter);
 
 // General error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {

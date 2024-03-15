@@ -14,8 +14,6 @@ function UserAvatar() {
     queryFn: getMeApi,
   });
 
-  console.log(data);
-
   const handleLogout = async () => {
     if (logoutState !== "loading") {
       setLogoutState("loading");

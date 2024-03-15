@@ -34,10 +34,10 @@ tippingRouter.post(
   userCheckMiddleware,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { matchId, teamId } = (req as AuthedRequest).body;
+      const { matchId, teamCode } = (req as AuthedRequest).body;
       const { discordUserId } = (req as AuthedRequest).user;
 
-      const newTip = await postMatchTip(matchId, teamId, discordUserId);
+      const newTip = await postMatchTip(matchId, teamCode, discordUserId);
 
       res.status(200).json(newTip);
     } catch (error) {

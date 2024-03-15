@@ -1,0 +1,11 @@
+.flagTipHoverFilter {
+  filter: grayscale(100%);
+}
+
+.flagTipHoverFilter:hover {
+  filter: url(#greenBorderFilter);
+}
+
+.flagTipSelectedTeamFilter {
+  filter: url(#greenBorderFilter);
+}

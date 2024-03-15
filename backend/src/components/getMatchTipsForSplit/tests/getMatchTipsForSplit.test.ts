@@ -7,7 +7,7 @@ jest.mock("../../../utils/mongodb/schemas/MatchTip");
 
 describe("getMatchTipsForSplit", () => {
   it("should return match tips for a given split and user", async () => {
-    const mockMatches = [{ id: "1" }, { id: "2" }, { id: "3" }];
+    const mockMatches = [{ matchId: "1" }, { matchId: "2" }, { matchId: "3" }];
     const mockTips = [
       { matchId: "1", discordUserId: "user1" },
       { matchId: "2", discordUserId: "user1" },

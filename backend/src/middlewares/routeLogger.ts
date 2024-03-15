@@ -7,7 +7,7 @@ const routeLogger = (req: Request, res: Response, next: NextFunction) => {
   res.on("finish", function () {
     console.log(
       chalk.green(req.method),
-      decodeURI(req.url),
+      decodeURI(req.originalUrl),
       res.statusCode,
       res.statusMessage,
       chalk.blue(userName)

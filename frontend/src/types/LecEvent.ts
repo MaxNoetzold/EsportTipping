@@ -1,3 +1,5 @@
+import { MatchTip } from "./MatchTip";
+
 export interface League {
   name: string;
   slug: string;
@@ -40,4 +42,8 @@ export interface GameEvent {
   blockName: string;
   league: League;
   match: Match;
+}
+
+export interface GameEventWithTip extends GameEvent {
+  tip?: MatchTip;
 }
