@@ -23,4 +23,10 @@ interface Request extends ExpressRequest {
   user?: User;
 }
 
+interface AuthedRequest extends ExpressRequest {
+  user: User;
+  session: Session;
+}
+
 export default Request;
+export { AuthedRequest, Session, User };

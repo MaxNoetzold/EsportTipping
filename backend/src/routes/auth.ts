@@ -3,7 +3,10 @@ import { request } from "undici";
 import { nanoid } from "nanoid";
 import SessionModel from "../utils/mongodb/schemas/Session";
 import UserModel from "../utils/mongodb/schemas/User";
-import Request from "../utils/types/RequestWithSessionAndUser";
+import Request, {
+  AuthedRequest,
+} from "../utils/types/RequestWithSessionAndUser";
+import userCheckMiddleware from "../middlewares/userCheck";
 
 const authRouter = express.Router();
 
@@ -160,13 +163,10 @@ authRouter.get(
 
 authRouter.get(
   "/@me",
+  userCheckMiddleware,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      if (!req.user) {
-        return res.status(401).send({ message: "Unauthorized" });
-      }
-
-      res.send(req.user);
+      res.send((req as AuthedRequest).user);
     } catch (error) {
       next(error);
     }
@@ -175,13 +175,12 @@ authRouter.get(
 
 authRouter.delete(
   "/",
+  userCheckMiddleware,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      if (!req.session) {
-        return res.status(400).send({ message: "No session found" });
-      }
-
-      await SessionModel.findByIdAndDelete(req.session._id).exec();
+      await SessionModel.findByIdAndDelete(
+        (req as AuthedRequest).session._id
+      ).exec();
 
       // delete cookie by overwriting it with maxAge = 0
       res.cookie("session", null, {
