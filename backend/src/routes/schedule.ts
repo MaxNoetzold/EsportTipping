@@ -4,6 +4,7 @@ import getLecScheduleForSplit, {
   getCurrentSplit,
 } from "../components/getLecSchedule";
 import Request from "../utils/types/RequestWithSessionAndUser";
+import updateMatchTips from "../components/updateMatchTips";
 
 const router = express.Router();
 
@@ -23,6 +24,14 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
 router.post("/", async (req: Request, res: Response) => {
   try {
     await updateLecSchedule();
+    /*
+      NOTE:
+       Unfortunately, I cant automate the call of this function with mongoose middleware
+       I write the matches with a bulkWrite which bypasses middlewares
+       therefore, I have to call this function manually and not forget it in case of a new place of match updates
+   
+    */
+    await updateMatchTips();
     res.status(200).send();
   } catch (error) {
     console.error(error);

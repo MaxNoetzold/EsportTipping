@@ -1,0 +1,46 @@
+{
+  "matchId": "111997906552170246",
+  "blockName": "Week 1",
+  "league": {
+    "name": "LEC",
+    "slug": "lec"
+  },
+  "match": {
+    "flags": ["hasVod"],
+    "teams": [
+      {
+        "name": "Team Vitality",
+        "code": "VIT",
+        "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+        "result": {
+          "outcome": "win",
+          "gameWins": 1
+        },
+        "record": {
+          "wins": 3,
+          "losses": 1
+        }
+      },
+      {
+        "name": "Team Heretics",
+        "code": "TH",
+        "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+        "result": {
+          "outcome": "loss",
+          "gameWins": 0
+        },
+        "record": {
+          "wins": 2,
+          "losses": 2
+        }
+      }
+    ],
+    "strategy": {
+      "type": "bestOf",
+      "count": 1
+    }
+  },
+  "startTime": "2024-03-09T16:00:00.000Z",
+  "state": "completed",
+  "type": "match"
+}
