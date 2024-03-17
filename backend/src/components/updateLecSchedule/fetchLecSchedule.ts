@@ -31,7 +31,7 @@ const fetchLecSchedule = async (): Promise<GameEvent[] | undefined> => {
         const json = await response.json();
         data = formatLecEvents(json?.data?.schedule?.events || []);
       } catch (err) {
-        console.log("Error:", err);
+        console.error("Process Response:", err);
       }
     }
   };

@@ -36,13 +36,6 @@ const LecMatchSchema = new Schema({
   },
 });
 
-// TODO: Update all relating tips when a LecMatch is updated
-LecMatchSchema.post("updateOne", function (doc) {
-  // 'this' is the query that triggered the updateOne operation
-  // 'doc' is the document that was updated
-  // Call your specific function here
-});
-
 const LecMatchModel = mongoose.model("LecMatch", LecMatchSchema);
 
 export default LecMatchModel;

@@ -1,7 +1,7 @@
 export interface MatchTip {
   matchId: string;
   discordUserId: string;
-  winningTeamCode: string;
+  tippedTeamCode: string;
   createdAt: Date;
   updatedAt: Date;
 }

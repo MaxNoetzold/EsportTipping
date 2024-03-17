@@ -23,8 +23,8 @@ function MatchTip({ match }: { match: GameEventWithTip }) {
   });
 
   useEffect(() => {
-    if (tip?.winningTeamCode) {
-      setTippedTeam(tip.winningTeamCode);
+    if (tip?.tippedTeamCode) {
+      setTippedTeam(tip.tippedTeamCode);
     }
   }, [tip]);
 

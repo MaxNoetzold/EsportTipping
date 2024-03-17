@@ -32,7 +32,7 @@ describe("postMatchTip", () => {
     expect(result).toEqual(matchInDb);
     expect(matchInDb?.discordUserId).toEqual(discordUserId);
     expect(matchInDb?.matchId).toEqual(matchId);
-    expect(matchInDb?.winningTeamCode).toEqual(teamId);
+    expect(matchInDb?.tippedTeamCode).toEqual(teamId);
     expect(matchInDb?.updatedAt).toBeDefined();
     expect(matchInDb?.createdAt).toBeDefined();
   });

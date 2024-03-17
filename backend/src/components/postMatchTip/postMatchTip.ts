@@ -3,7 +3,7 @@ import MatchTipModel from "../../utils/mongodb/schemas/MatchTip";
 
 const postMatchTip = async (
   matchId: string,
-  winningTeamCode: string,
+  tippedTeamCode: string,
   discordUserId: string
 ) => {
   // get the match
@@ -20,7 +20,7 @@ const postMatchTip = async (
   // upsert the tip
   const newTip = await MatchTipModel.findOneAndUpdate(
     { matchId, discordUserId },
-    { matchId, winningTeamCode, discordUserId },
+    { matchId, tippedTeamCode, discordUserId },
     { upsert: true, new: true }
   ).lean();
 

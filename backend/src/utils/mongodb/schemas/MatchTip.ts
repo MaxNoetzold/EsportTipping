@@ -5,7 +5,8 @@ const { Schema } = mongoose;
 const MatchTipSchema = new Schema({
   matchId: { type: String, required: true },
   discordUserId: { type: String, required: true },
-  winningTeamCode: { type: String, required: true },
+  tippedTeamCode: { type: String, required: true },
+  winningTeamCode: { type: String },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date },
 });
