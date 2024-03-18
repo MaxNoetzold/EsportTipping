@@ -1,19 +1,25 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import getMeApi from "../../../api/getMeApi";
 import logoutApi from "../../../api/logoutApi";
 import LoginButton from "./LoginButton";
 import { useErrorSnackbar } from "../../ErrorSnackbar";
+import useOnClickOutside from "../../../utils/useOnClickOutside";
 
 function UserAvatar() {
   const queryClient = useQueryClient();
   const showError = useErrorSnackbar();
   const [showPopdown, setShowPopdown] = useState(false);
   const [logoutState, setLogoutState] = useState("idle");
+  const popdownRef = useRef(null);
 
   const { data: user, error: userError } = useQuery({
     queryKey: ["user", "me"],
     queryFn: getMeApi,
+  });
+
+  useOnClickOutside(popdownRef, () => {
+    setShowPopdown(false);
   });
 
   useEffect(() => {
@@ -48,7 +54,10 @@ function UserAvatar() {
         onClick={togglePopdown}
       />
       {showPopdown && (
-        <div className="absolute left-1/2 transform -translate-x-1/2 mt-0 bg-gray-900 text-white border border-gray-700 px-3 pb-2">
+        <div
+          ref={popdownRef}
+          className="absolute left-1/2 transform -translate-x-1/2 mt-0 bg-gray-900 text-white border border-gray-700 px-3 pb-2"
+        >
           <a onClick={handleLogout} className="cursor-pointer">
             Logout
           </a>

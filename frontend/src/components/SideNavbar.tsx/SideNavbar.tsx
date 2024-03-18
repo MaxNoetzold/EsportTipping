@@ -4,9 +4,9 @@ import useOnClickOutside from "../../utils/useOnClickOutside";
 
 function SideNavbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const ref = useRef(null);
+  const sidebarRef = useRef(null);
 
-  useOnClickOutside(ref, (event) => {
+  useOnClickOutside(sidebarRef, (event) => {
     const closeButton = document.getElementById("sidebar-toggle-button");
     if (closeButton && closeButton.contains(event.target as Node)) {
       // The click event is on the button, do nothing
@@ -31,7 +31,7 @@ function SideNavbar() {
         <HamburgerMenuIcon />
       </button>
       <div
-        ref={ref}
+        ref={sidebarRef}
         className={`fixed left-0 top-20 h-full w-64 bg-gray-950 border-r border-gray-700 p-4 z-40 overflow-auto transition-transform duration-200 ease-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
