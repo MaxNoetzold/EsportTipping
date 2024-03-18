@@ -3,9 +3,17 @@
 }
 
 .flagTipHoverFilter:hover {
+  filter: url(#grayBorderFilter);
+}
+
+.flagTipCorrectTeamBorder {
   filter: url(#greenBorderFilter);
 }
 
-.flagTipSelectedTeamFilter {
-  filter: url(#greenBorderFilter);
+.flagTipSelectedTeamBorder {
+  filter: url(#yellowBorderFilter);
+}
+
+.flagTipIncorrectTeamBorder {
+  filter: url(#redBorderFilter);
 }

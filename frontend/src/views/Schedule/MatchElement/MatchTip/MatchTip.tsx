@@ -7,6 +7,23 @@ import { useEffect, useState } from "react";
 import postMatchTipApi from "../../../../api/postMatchTipApi";
 import { useErrorSnackbar } from "../../../../components/ErrorSnackbar";
 
+const getTeamFlagBorderClass = (
+  tippedTeam: string | null,
+  teamCode: string,
+  winningTeamCode: string | undefined
+) => {
+  if (tippedTeam === teamCode) {
+    if (!winningTeamCode) {
+      return "flagTipSelectedTeamBorder";
+    } else if (teamCode !== winningTeamCode) {
+      return "flagTipIncorrectTeamBorder";
+    } else if (teamCode === winningTeamCode) {
+      return "flagTipCorrectTeamBorder";
+    }
+  }
+  return "";
+};
+
 function MatchTip({ match }: { match: GameEventWithTip }) {
   const queryClient = useQueryClient();
   const showError = useErrorSnackbar();
@@ -56,12 +73,17 @@ function MatchTip({ match }: { match: GameEventWithTip }) {
     <div className="flex flex-col items-center w-28">
       <div className="text-base text-gray-500 mb-2">Who wins?</div>
       <div className="flex flex-row items-center w-24 justify-between">
-        <SvgTipFilter />
+        <SvgTipFilter color="green" />
+        <SvgTipFilter color="yellow" />
+        <SvgTipFilter color="red" />
+        <SvgTipFilter color="gray" />
         {teams.map((team) => (
           <img
-            className={`w-10 h-10 mb-2 flagTipHoverFilter ${
-              tippedTeam === team.code && "flagTipSelectedTeamFilter"
-            }`}
+            className={`w-10 h-10 mb-2 flagTipHoverFilter ${getTeamFlagBorderClass(
+              tippedTeam,
+              team.code,
+              tip?.winningTeamCode
+            )}`}
             src={team.image}
             alt={`${team.code} flag`}
             onClick={() => mutateTip.mutate(team.code)}
