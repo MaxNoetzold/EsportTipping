@@ -6,6 +6,7 @@ import { GameEvent } from "../../types/LecEvent";
 import getMatchTipsApi from "../../api/getMatchTipsApi";
 import { useErrorSnackbar } from "../../components/ErrorSnackbar";
 import { useEffect } from "react";
+import isNextMatch from "./isNextMatch";
 
 function Schedule() {
   const showError = useErrorSnackbar();
@@ -45,7 +46,11 @@ function Schedule() {
   return (
     <div className="w-full">
       {matchesWithTips.map((match: GameEvent) => (
-        <MatchElement match={match} key={match.matchId} />
+        <MatchElement
+          match={match}
+          isNext={isNextMatch(match.matchId, matches)}
+          key={match.matchId}
+        />
       ))}
     </div>
   );
