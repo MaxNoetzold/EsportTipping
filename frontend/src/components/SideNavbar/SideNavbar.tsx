@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
+import { Link } from "@tanstack/react-router";
 import HamburgerMenuIcon from "./HamburgerMenuIcon";
 import useOnClickOutside from "../../utils/useOnClickOutside";
+import TippingGroups from "./TippingGroups";
 
 function SideNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +34,16 @@ function SideNavbar() {
       </button>
       <div
         ref={sidebarRef}
-        className={`fixed left-0 top-20 h-full w-64 bg-gray-950 border-r border-gray-700 p-4 z-40 overflow-auto transition-transform duration-200 ease-out ${
+        className={`fixed left-0 top-20 h-full w-64 bg-gray-950 border-r border-gray-700 z-40 overflow-auto transition-transform duration-200 ease-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        {/* Your sidebar content goes here */}
+        <div className="flex flex-col w-64 h-full bg-gray-800 text-white">
+          <Link to="/" className="p-4 hover:bg-gray-700">
+            Home
+          </Link>
+          <TippingGroups />
+        </div>
       </div>
     </>
   );

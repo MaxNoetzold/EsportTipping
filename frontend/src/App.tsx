@@ -13,7 +13,7 @@ declare module "@tanstack/react-router" {
 
 function App() {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <RouterProvider router={router} />
     </div>
   );

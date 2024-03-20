@@ -17,6 +17,8 @@ import { Route as rootRoute } from './routes/__root'
 // Create Virtual Routes
 
 const IndexLazyImport = createFileRoute('/')()
+const GroupsIndexLazyImport = createFileRoute('/groups/')()
+const GroupsGroupIdIndexLazyImport = createFileRoute('/groups/$groupId/')()
 
 // Create/Update Routes
 
@@ -24,6 +26,18 @@ const IndexLazyRoute = IndexLazyImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+
+const GroupsIndexLazyRoute = GroupsIndexLazyImport.update({
+  path: '/groups/',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/groups/index.lazy').then((d) => d.Route))
+
+const GroupsGroupIdIndexLazyRoute = GroupsGroupIdIndexLazyImport.update({
+  path: '/groups/$groupId/',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() =>
+  import('./routes/groups/$groupId/index.lazy').then((d) => d.Route),
+)
 
 // Populate the FileRoutesByPath interface
 
@@ -33,11 +47,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexLazyImport
       parentRoute: typeof rootRoute
     }
+    '/groups/': {
+      preLoaderRoute: typeof GroupsIndexLazyImport
+      parentRoute: typeof rootRoute
+    }
+    '/groups/$groupId/': {
+      preLoaderRoute: typeof GroupsGroupIdIndexLazyImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren([IndexLazyRoute])
+export const routeTree = rootRoute.addChildren([
+  IndexLazyRoute,
+  GroupsIndexLazyRoute,
+  GroupsGroupIdIndexLazyRoute,
+])
 
 /* prettier-ignore-end */

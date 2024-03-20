@@ -1,4 +1,4 @@
-import SideNavbar from "../SideNavbar.tsx/SideNavbar";
+import SideNavbar from "../SideNavbar";
 import UserAvatar from "./UserAvatar";
 
 function TopNavbar() {
