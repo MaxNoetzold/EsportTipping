@@ -6,6 +6,7 @@ import sessionCheckMiddleware from "./middlewares/sessionCheck";
 import routeLogger from "./middlewares/routeLogger";
 import tippingRouter from "./routes/tipping";
 import bodyParser from "body-parser";
+import tippingGroupRouter from "./routes/groups";
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/schedule", scheduleRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/tipping", tippingRouter);
+app.use("/api/groups", tippingGroupRouter);
 
 // General error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
