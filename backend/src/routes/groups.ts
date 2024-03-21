@@ -10,6 +10,7 @@ import {
   groupOwnerCheckMiddleware,
 } from "../middlewares/groupCheck";
 import addMemberToGroup from "../components/addMemberToGroup";
+import makeGroupUsersReadable from "../components/makeGroupUsersReadable/makeGroupUsersReadable";
 
 const tippingGroupRouter = express.Router();
 
@@ -23,7 +24,11 @@ tippingGroupRouter.get(
 
       const groups = await getGroupsForUser(discordUserId);
 
-      res.status(200).json(groups);
+      const groupsWithOwnerName = await Promise.all(
+        groups.map((group) => makeGroupUsersReadable(group))
+      );
+
+      res.status(200).json(groupsWithOwnerName);
     } catch (error) {
       next(error);
     }

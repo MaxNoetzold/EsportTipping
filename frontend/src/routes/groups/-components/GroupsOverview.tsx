@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useErrorSnackbar } from "../../../components/ErrorSnackbar";
 import Loading from "../../../components/Loading";
 import CreateNewGroup from "./CreateNewGroup";
+import { Link } from "@tanstack/react-router";
 
 function GroupsOverview() {
   const showError = useErrorSnackbar();
@@ -30,15 +31,23 @@ function GroupsOverview() {
       <h1 className="text-2xl font-bold mb-4">Groups</h1>
       <CreateNewGroup />
       {groups.map((group) => (
-        <div key={group._id} className="border p-4 mb-4 cursor-pointer">
+        // TODO: Make this div a link
+        <div
+          // to="/groups/$groupId"
+          // params={{
+          //   groupId: group._id,
+          // }}
+          key={group._id}
+          className="border p-4 mb-4 cursor-pointer"
+        >
           <h2 className="text-xl font-bold">{group.name}</h2>
-          <p>Owner: {group.owner}</p>
+          <p>Owner: {group.ownerName}</p>
           <p>League: {group.league}</p>
           <p>Members:</p>
           <ul>
             {group.members.map((member) => (
               <li key={member.userId}>
-                {member.userId} - {member.role}
+                {member.userName} - {member.role}
               </li>
             ))}
           </ul>
