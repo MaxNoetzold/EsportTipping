@@ -32,7 +32,7 @@ const ErrorSnackbar = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 bg-red-500 text-white p-4 m-4 rounded">
+    <div className="fixed bottom-0 left-0 bg-red-500 text-white p-4 m-4 rounded z-50">
       {currentMessage}
     </div>
   );
