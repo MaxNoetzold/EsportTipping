@@ -7,7 +7,7 @@ function TippingGroups() {
   const [showGroups, setShowGroups] = useState(false);
 
   const { data: groups = [] } = useQuery({
-    queryKey: ["groups"],
+    queryKey: ["group", "all"],
     queryFn: () => getGroupsApi(),
   });
 

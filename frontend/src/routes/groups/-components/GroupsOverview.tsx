@@ -14,7 +14,7 @@ function GroupsOverview() {
     data: groups = [],
     error: groupsError,
   } = useQuery({
-    queryKey: ["groups"],
+    queryKey: ["group", "all"],
     queryFn: () => getGroupsApi(),
   });
 

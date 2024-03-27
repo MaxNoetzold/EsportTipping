@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getAPI } from ".";
-import { TippingGroup } from "../types/TippingGroup";
+import { DetailedTippingGroup, TippingGroup } from "../types/TippingGroup";
 
 export const getGroupsApi = async () => {
   try {
@@ -33,6 +33,20 @@ export const createGroupApi = async (name: string, league: string) => {
   }
 };
 
+export const updateGroupApi = async (groupId: string, name: string) => {
+  try {
+    const api = getAPI();
+    const response = await api.put(`/api/groups/${groupId}`, { name });
+    return response.data as TippingGroup;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      throw new Error(error.response?.data?.message || error.message);
+    } else {
+      throw error;
+    }
+  }
+};
+
 export const deleteGroupApi = async (groupId: string) => {
   try {
     const api = getAPI();
@@ -51,7 +65,7 @@ export const getGroupApi = async (groupId: string) => {
   try {
     const api = getAPI();
     const response = await api.get(`/api/groups/${groupId}`);
-    return response.data;
+    return response.data as DetailedTippingGroup;
   } catch (error) {
     if (axios.isAxiosError(error)) {
       throw new Error(error.response?.data?.message || error.message);
@@ -61,11 +75,14 @@ export const getGroupApi = async (groupId: string) => {
   }
 };
 
-export const addMemberToGroupApi = async (groupId: string, userId: string) => {
+export const addMemberToGroupApi = async (
+  groupId: string,
+  username: string
+) => {
   try {
     const api = getAPI();
     const response = await api.post(`/api/groups/${groupId}/members`, {
-      userId,
+      username,
     });
     return response.data as TippingGroup;
   } catch (error) {

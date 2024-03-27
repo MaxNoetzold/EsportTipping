@@ -14,3 +14,11 @@ export type TippingGroup = {
   members: Member[];
   league: string;
 };
+
+export type DetailedTippingGroup = TippingGroup & {
+  tips: {
+    [userId: string]: {
+      [gameId: string]: string;
+    };
+  };
+};

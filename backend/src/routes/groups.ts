@@ -11,6 +11,7 @@ import {
 } from "../middlewares/groupCheck";
 import addMemberToGroup from "../components/addMemberToGroup";
 import makeGroupUsersReadable from "../components/makeGroupUsersReadable/makeGroupUsersReadable";
+import UserModel from "../utils/mongodb/schemas/User";
 
 const tippingGroupRouter = express.Router();
 
@@ -59,6 +60,31 @@ tippingGroupRouter.post(
   }
 );
 
+// update a group where you are the owner
+// The only updateable field right now is the name
+tippingGroupRouter.put(
+  "/:groupId",
+  userCheckMiddleware,
+  groupOwnerCheckMiddleware,
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { discordUserId } = (req as AuthedRequest).user;
+      const { groupId } = req.params;
+      const { name } = req.body;
+
+      const updatedGroup = await TippingGroupModel.findOneAndUpdate(
+        { _id: groupId, owner: discordUserId },
+        { name },
+        { new: true }
+      ).lean();
+
+      res.status(200).json(updatedGroup);
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
 // delete a group where you are the owner
 tippingGroupRouter.delete(
   "/:groupId",
@@ -87,8 +113,21 @@ tippingGroupRouter.get(
   userCheckMiddleware,
   groupCheckMiddleware,
   async (req: Request, res: Response, next: NextFunction) => {
-    // TODO
-    res.status(501).json({ message: "Not implemented" });
+    try {
+      const { groupId } = req.params;
+
+      const group = await TippingGroupModel.findById(groupId).lean();
+
+      if (!group) {
+        return res.status(404).json({ message: "Group not found" });
+      }
+      const groupWithReadableUsers = await makeGroupUsersReadable(group);
+
+      // TODO: implement tips
+      res.status(200).json({ ...groupWithReadableUsers, tips: {} });
+    } catch (error) {
+      next(error);
+    }
   }
 );
 
@@ -99,10 +138,15 @@ tippingGroupRouter.post(
   groupOwnerCheckMiddleware,
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { userId } = req.body;
+      const { username } = req.body;
       const { groupId } = req.params;
 
-      const updatedGroup = await addMemberToGroup(userId, groupId);
+      const user = await UserModel.findOne({ globalName: username }).lean();
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      const updatedGroup = await addMemberToGroup(user.discordUserId, groupId);
 
       res.status(201).json(updatedGroup);
     } catch (error) {
