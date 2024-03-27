@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-
-const groups = [
-  { name: "Group 1", id: "group1" },
-  { name: "Group 2", id: "group2" },
-  { name: "Group 3", id: "group3" },
-];
+import { useQuery } from "@tanstack/react-query";
+import { getGroupsApi } from "../../api/tippingGroupApi";
 
 function TippingGroups() {
   const [showGroups, setShowGroups] = useState(false);
+
+  const { data: groups = [] } = useQuery({
+    queryKey: ["groups"],
+    queryFn: () => getGroupsApi(),
+  });
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
@@ -27,10 +28,10 @@ function TippingGroups() {
         <div className="absolute left-0 w-full bg-gray-700">
           {groups.map((group) => (
             <Link
-              key={group.id}
+              key={group._id}
               to="/groups/$groupId"
               params={{
-                groupId: group.id,
+                groupId: group._id,
               }}
               className="block p-4 hover:bg-gray-600"
             >

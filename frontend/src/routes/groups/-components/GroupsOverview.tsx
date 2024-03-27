@@ -30,29 +30,30 @@ function GroupsOverview() {
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Groups</h1>
       <CreateNewGroup />
-      {groups.map((group) => (
-        // TODO: Make this div a link
-        <div
-          // to="/groups/$groupId"
-          // params={{
-          //   groupId: group._id,
-          // }}
-          key={group._id}
-          className="border p-4 mb-4 cursor-pointer"
-        >
-          <h2 className="text-xl font-bold">{group.name}</h2>
-          <p>Owner: {group.ownerName}</p>
-          <p>League: {group.league}</p>
-          <p>Members:</p>
-          <ul>
-            {group.members.map((member) => (
-              <li key={member.userId}>
-                {member.userName} - {member.role}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <div className="flex flex-col">
+        {groups.map((group) => (
+          <Link
+            to="/groups/$groupId"
+            params={{
+              groupId: group._id,
+            }}
+            key={group._id}
+            className="border p-4 mb-4 cursor-pointer"
+          >
+            <h2 className="text-xl font-bold">{group.name}</h2>
+            <p>Owner: {group.ownerName}</p>
+            <p>League: {group.league}</p>
+            <p>Members:</p>
+            <ul>
+              {group.members.map((member) => (
+                <li key={member.userId}>
+                  {member.userName} - {member.role}
+                </li>
+              ))}
+            </ul>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
