@@ -43,14 +43,12 @@ function GroupsOverview() {
             <h2 className="text-xl font-bold">{group.name}</h2>
             <p>Owner: {group.ownerName}</p>
             <p>League: {group.league}</p>
-            <p>Members:</p>
-            <ul>
-              {group.members.map((member) => (
-                <li key={member.userId}>
-                  {member.userName} - {member.role}
-                </li>
-              ))}
-            </ul>
+            <p>
+              Members:{" "}
+              {group.members.reduce((names, member, index) => {
+                return names + (index !== 0 ? ", " : "") + member.userName;
+              }, "")}
+            </p>
           </Link>
         ))}
       </div>

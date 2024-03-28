@@ -146,7 +146,7 @@ tippingGroupRouter.post(
         return res.status(404).json({ message: "User not found" });
       }
 
-      const updatedGroup = await addMemberToGroup(user.discordUserId, groupId);
+      const updatedGroup = await addMemberToGroup(groupId, user.discordUserId);
 
       res.status(201).json(updatedGroup);
     } catch (error) {
