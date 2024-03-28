@@ -10,6 +10,7 @@ import {
 import Loading from "../../../../components/Loading";
 import { useErrorSnackbar } from "../../../../components/ErrorSnackbar";
 import getMeApi from "../../../../api/getMeApi";
+import GroupTitle from "./Title";
 
 const route = getRouteApi("/groups/$groupId/");
 
@@ -129,7 +130,7 @@ function SingleGroupView() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">{group.name}</h1>
+      <GroupTitle group={group} />
       <p>League: {group.league}</p>
       <ul>
         {group.members.map((member) => (
