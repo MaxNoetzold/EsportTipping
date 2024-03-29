@@ -6,6 +6,7 @@ import Loading from "../../../../components/Loading";
 import { useErrorSnackbar } from "../../../../components/ErrorSnackbar";
 import Header from "./Header";
 import TippingTable from "./TippingTable";
+import TippingStats from "./TippingStats";
 
 const route = getRouteApi("/groups/$groupId/");
 
@@ -40,6 +41,7 @@ function SingleGroupView() {
   return (
     <div>
       <Header group={group} />
+      <TippingStats group={group} />
       <TippingTable group={group} />
     </div>
   );
