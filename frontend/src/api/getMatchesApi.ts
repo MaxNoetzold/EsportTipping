@@ -1,5 +1,6 @@
 import axios from "axios";
 import { getAPI } from ".";
+import { GameEvent } from "../types/LecEvent";
 
 const getMatchesApi = async (splitName: string) => {
   try {
@@ -9,7 +10,7 @@ const getMatchesApi = async (splitName: string) => {
         split: splitName,
       },
     });
-    return response.data;
+    return response.data as GameEvent[];
   } catch (error) {
     if (axios.isAxiosError(error)) {
       throw new Error(error.response?.data?.message || error.message);

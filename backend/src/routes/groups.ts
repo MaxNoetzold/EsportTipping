@@ -10,8 +10,9 @@ import {
   groupOwnerCheckMiddleware,
 } from "../middlewares/groupCheck";
 import addMemberToGroup from "../components/addMemberToGroup";
-import makeGroupUsersReadable from "../components/makeGroupUsersReadable/makeGroupUsersReadable";
+import makeGroupUsersReadable from "../components/makeGroupUsersReadable";
 import UserModel from "../utils/mongodb/schemas/User";
+import getTipsOfUsers from "../components/getTipsOfUsers/getTipsOfUsers";
 
 const tippingGroupRouter = express.Router();
 
@@ -122,9 +123,10 @@ tippingGroupRouter.get(
         return res.status(404).json({ message: "Group not found" });
       }
       const groupWithReadableUsers = await makeGroupUsersReadable(group);
+      const userIds = [group.owner, ...group.members.map((m) => m.userId)];
+      const tips = await getTipsOfUsers(userIds, "2024_spring");
 
-      // TODO: implement tips
-      res.status(200).json({ ...groupWithReadableUsers, tips: {} });
+      res.status(200).json({ ...groupWithReadableUsers, tips });
     } catch (error) {
       next(error);
     }

@@ -1,4 +1,5 @@
 import { ObjectId } from "mongodb";
+import { MatchTip } from "./Tipps";
 
 export type Member = {
   userId: string;
@@ -17,8 +18,6 @@ export type TippingGroup = {
 
 export type DetailedTippingGroup = TippingGroup & {
   tips: {
-    [userId: string]: {
-      [gameId: string]: string;
-    };
+    [userId: string]: MatchTip[];
   };
 };

@@ -48,7 +48,7 @@ function Schedule() {
       {matchesWithTips.map((match: GameEvent) => (
         <MatchElement
           match={match}
-          isNext={isNextMatch(match.matchId, matches)}
+          isNext={isNextMatch(match.matchId, matchesWithTips)}
           key={match.matchId}
         />
       ))}

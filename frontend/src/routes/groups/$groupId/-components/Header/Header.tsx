@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import getMeApi from "../../../../../api/getMeApi";
-import { TippingGroup } from "../../../../../types/TippingGroup";
+import { DetailedTippingGroup } from "../../../../../types/TippingGroup";
 import { Navigate } from "@tanstack/react-router";
 import { useErrorSnackbar } from "../../../../../components/ErrorSnackbar";
 import { useEffect } from "react";
@@ -8,7 +8,7 @@ import GroupTitle from "./Title";
 import GroupDeleteButton from "./DeleteButton";
 import GroupMembers from "./Members";
 
-function Header({ group }: { group: TippingGroup }) {
+function Header({ group }: { group: DetailedTippingGroup }) {
   const showError = useErrorSnackbar();
 
   const { data: user, error: userError } = useQuery({

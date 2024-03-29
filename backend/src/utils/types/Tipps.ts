@@ -1,9 +1,8 @@
-export interface MatchTip {
-  _id: string;
+export type MatchTip = {
   matchId: string;
   discordUserId: string;
   tippedTeamCode: string;
   winningTeamCode?: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
+  createdAt?: Date;
+  updatedAt?: Date;
+};

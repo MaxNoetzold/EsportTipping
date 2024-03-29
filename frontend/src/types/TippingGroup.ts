@@ -1,3 +1,5 @@
+import { MatchTip } from "./MatchTip";
+
 export type Member = {
   userId: string;
   userName: string;
@@ -15,8 +17,6 @@ export type TippingGroup = {
 
 export type DetailedTippingGroup = TippingGroup & {
   tips: {
-    [userId: string]: {
-      [gameId: string]: string;
-    };
+    [userId: string]: MatchTip[];
   };
 };
