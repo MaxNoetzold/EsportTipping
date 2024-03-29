@@ -4,8 +4,33 @@ import puppeteer, { HTTPResponse, HTTPRequest } from "puppeteer";
 import UserAgent from "user-agents";
 import { GameEvent } from "../../utils/types/LecEvent";
 import formatLecEvents from "./formatLecEvents";
+import FunctionRunTimerModel from "../../utils/mongodb/schemas/FunctionRunTimers";
 
-const fetchLecSchedule = async (): Promise<GameEvent[] | undefined> => {
+const fetchLecScheduleIfNeeded = async () => {
+  // check in the database if the last fetch was more than an hour ago
+  const timer = await FunctionRunTimerModel.findOne({
+    functionName: "fetchLecSchedule",
+  }).lean();
+  if (timer) {
+    const now = new Date();
+    if (now.getTime() - timer.timestamp.getTime() < 3600000) {
+      // if not, return
+      return [];
+    }
+  }
+
+  // if so, fetch the schedule
+  const data = await fetchLecSchedule();
+  // save the timestamp of the fetch
+  await FunctionRunTimerModel.updateOne(
+    { functionName: "fetchLecSchedule" },
+    { timestamp: new Date() },
+    { upsert: true }
+  );
+  return data;
+};
+
+const fetchLecSchedule = async () => {
   let data: GameEvent[] | undefined;
 
   // detect the getSchedule request, manipulate it and get the response
@@ -53,4 +78,4 @@ const fetchLecSchedule = async (): Promise<GameEvent[] | undefined> => {
   return data;
 };
 
-export default fetchLecSchedule;
+export default fetchLecScheduleIfNeeded;

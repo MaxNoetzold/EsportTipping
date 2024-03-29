@@ -18,10 +18,8 @@ router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   } catch (error) {
     next(error);
   }
-});
 
-// Get latest data from lolesports and update the database
-router.post("/", async (req: Request, res: Response) => {
+  // Get the latest data from lolesports and update the database
   try {
     await updateLecSchedule();
     /*
@@ -32,10 +30,8 @@ router.post("/", async (req: Request, res: Response) => {
    
     */
     await updateMatchTips();
-    res.status(200).send();
   } catch (error) {
-    console.error(error);
-    res.status(500).send();
+    console.error("Trying to update the data from LEC", error);
   }
 });
 
