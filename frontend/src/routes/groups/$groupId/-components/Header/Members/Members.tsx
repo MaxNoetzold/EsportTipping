@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { TippingGroup } from "../../../../../types/TippingGroup";
-import { removeMemberFromGroupApi } from "../../../../../api/tippingGroupApi";
-import { useErrorSnackbar } from "../../../../../components/ErrorSnackbar";
+import { TippingGroup } from "../../../../../../types/TippingGroup";
+import { removeMemberFromGroupApi } from "../../../../../../api/tippingGroupApi";
 import AddUser from "./AddUser";
+import { useErrorSnackbar } from "../../../../../../components/ErrorSnackbar";
 
 function GroupMembers({
   group,

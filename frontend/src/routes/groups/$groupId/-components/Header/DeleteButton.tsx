@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
-import { useErrorSnackbar } from "../../../../components/ErrorSnackbar";
-import Modal from "../../../../components/Modal";
-import { deleteGroupApi } from "../../../../api/tippingGroupApi";
+import { useErrorSnackbar } from "../../../../../components/ErrorSnackbar";
+import Modal from "../../../../../components/Modal";
+import { deleteGroupApi } from "../../../../../api/tippingGroupApi";
 import { useNavigate } from "@tanstack/react-router";
 
 function GroupDeleteButton({ groupId }: { groupId: string }) {

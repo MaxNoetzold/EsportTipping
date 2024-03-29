@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { addMemberToGroupApi } from "../../../../../api/tippingGroupApi";
-import { useErrorSnackbar } from "../../../../../components/ErrorSnackbar";
-import Modal from "../../../../../components/Modal";
+import { addMemberToGroupApi } from "../../../../../../api/tippingGroupApi";
+import { useErrorSnackbar } from "../../../../../../components/ErrorSnackbar";
+import Modal from "../../../../../../components/Modal";
 import { useState } from "react";
 
 function AddUser({ groupId }: { groupId: string }) {

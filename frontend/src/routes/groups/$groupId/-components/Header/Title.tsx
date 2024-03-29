@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { TippingGroup } from "../../../../types/TippingGroup";
-import Modal from "../../../../components/Modal";
+import { TippingGroup } from "../../../../../types/TippingGroup";
+import Modal from "../../../../../components/Modal";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { updateGroupApi } from "../../../../api/tippingGroupApi";
-import { useErrorSnackbar } from "../../../../components/ErrorSnackbar";
+import { updateGroupApi } from "../../../../../api/tippingGroupApi";
+import { useErrorSnackbar } from "../../../../../components/ErrorSnackbar";
 
 function GroupTitle({
   group,
