@@ -2,6 +2,8 @@ import "dotenv/config";
 
 import expressApp from "./server";
 import connectToDatabase from "./utils/mongodb/connectToDatabase";
+import cleanupOldSessions from "./components/cleanupOldSessions";
+import mongoose from "mongoose";
 
 console.log("Start Server");
 
@@ -23,9 +25,25 @@ console.log("Connecting to the database");
 await connectToDatabase();
 console.log("Connected to the database");
 
+await cleanupOldSessions();
+const dayMillis = 86400000;
+const cleanupInterval = setInterval(cleanupOldSessions, dayMillis);
+
 const port = process.env.PORT || 3000;
 expressApp.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// TODO: Add a teardown (to close db conn)
+/* Teardown the server */
+async function handleExit() {
+  console.log("Stopping server");
+  clearInterval(cleanupInterval);
+  // Close your database connection here
+  await mongoose.connection.close();
+  console.log("Server stopped");
+}
+
+process.on("SIGINT", async () => {
+  await handleExit();
+  process.exit(); // This will trigger the 'exit' event
+});
