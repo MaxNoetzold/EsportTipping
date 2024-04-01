@@ -25,6 +25,7 @@ console.log("Connecting to the database");
 await connectToDatabase();
 console.log("Connected to the database");
 
+// Cleanup old sessions on startup and once every day
 await cleanupOldSessions();
 const dayMillis = 86400000;
 const cleanupInterval = setInterval(cleanupOldSessions, dayMillis);

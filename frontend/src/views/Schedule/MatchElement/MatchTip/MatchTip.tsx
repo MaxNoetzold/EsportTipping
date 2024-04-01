@@ -54,7 +54,7 @@ function MatchTip({ match }: { match: GameEventWithTip }) {
       setTippedTeam(teamCode);
       return tippedTeam;
     },
-    onError: (error, variables, context) => {
+    onError: (error, _variables, context) => {
       showError(error.message);
       if (context) {
         setTippedTeam(context);

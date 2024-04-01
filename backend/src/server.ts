@@ -38,8 +38,10 @@ app.use("*", (req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
+app.use(express.static("frontend"));
+
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, World!");
+  res.sendFile("index.html", { root: "frontend" });
 });
 
 app.use("/api/schedule", scheduleRouter);
