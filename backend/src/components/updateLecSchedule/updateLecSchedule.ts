@@ -3,7 +3,6 @@ import { GameEvent } from "../../utils/types/LecEvent";
 import fetchLecSchedule from "./fetchLecSchedule";
 import updateLecMatchesInDatabase from "./updateLecMatchesInDatabase";
 
-// TODO: This should only be run once per hour to not overload the lolesports servers
 const updateLecSchedule = async () => {
   const events: Array<GameEvent> | undefined = await fetchLecSchedule();
   if (events) {

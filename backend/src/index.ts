@@ -12,7 +12,7 @@ if (!process.env.MONGODB_URI) {
   console.error("MONGODB_URI is not set");
   process.exit(1);
 }
-if (!process.env.DEV_FRONTEND_IPS) {
+if (process.env.NODE_ENV !== "production" && !process.env.DEV_FRONTEND_IPS) {
   console.error("DEV_FRONTEND_IPS is not set");
   process.exit(1);
 }

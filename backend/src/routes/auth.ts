@@ -148,8 +148,7 @@ authRouter.get(
         maxAge: sessionMaxAge,
         signed: true,
         httpOnly: true,
-        // TODO: change to strict in production
-        sameSite: "none",
+        sameSite: process.env.NODE_ENV === "production" ? "strict" : "none",
         secure: true,
       });
 

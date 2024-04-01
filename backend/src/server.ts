@@ -16,27 +16,28 @@ app.use(bodyParser.json());
 app.use(sessionCheckMiddleware);
 app.use(routeLogger);
 
-// TODO: This is only for development, we should remove this in production -> Find a way to deactive this in production
-app.use("*", (req: Request, res: Response, next: NextFunction) => {
-  const origin = req.headers.origin;
-  if (origin && process.env.DEV_FRONTEND_IPS?.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  }
-  // Request headers you wish to allow
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type"
-  );
-  // Request methods you wish to allow
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  );
-  // so we can send cookies
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+if (process.env.NODE_ENV !== "production") {
+  app.use("*", (req: Request, res: Response, next: NextFunction) => {
+    const origin = req.headers.origin;
+    if (origin && process.env.DEV_FRONTEND_IPS?.includes(origin)) {
+      res.setHeader("Access-Control-Allow-Origin", origin);
+    }
+    // Request headers you wish to allow
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "X-Requested-With,content-type"
+    );
+    // Request methods you wish to allow
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    );
+    // so we can send cookies
+    res.setHeader("Access-Control-Allow-Credentials", "true");
 
-  next();
-});
+    next();
+  });
+}
 
 app.use(express.static("frontend"));
 

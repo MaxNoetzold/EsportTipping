@@ -38,8 +38,6 @@ function Schedule() {
     return <Loading />;
   }
 
-  console.log("Copied correctly!");
-
   const matchesWithTips = (matches || []).map((match: GameEvent) => {
     const tip = tips?.find((t) => t.matchId === match.matchId);
     return { ...match, tip };
