@@ -14,6 +14,7 @@
 3. Run: `docker-compose up -d`
    1. Probably first run `nano docker-compose.yaml` to edit the versions tag
    2. Download: `docker pull maxnoetzold/esport-tipping-server:${version}`
+   3. Copy the relevant docker files to the server `scp docker-compose.yaml .env Dockerfile user@ip:~/server docker-compose.yaml`
 
 ## Docker Only Commands
 

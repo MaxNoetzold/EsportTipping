@@ -1,6 +1,3 @@
-# docker compose version which is currently 3.8
-version: "3"
-
 # services : is a list of our container
 services:
   # name is optional for our mongodb
@@ -26,10 +23,13 @@ services:
 
   # name is optional for our backend
   server:
-    container_name: "esport-tipping-server"
     # to build an image based on Dockerfile
     # it looks in this folder to find Dockerfile to build an image
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "esport-tipping-server"
+    image: maxnoetzold/esport-tipping-server
     # the port that we want to publish for backend
     ports:
       - "3000:3000"

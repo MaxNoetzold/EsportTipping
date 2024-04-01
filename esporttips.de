@@ -1,0 +1,49 @@
+server {
+    include /etc/nginx/mime.types;
+
+    server_name esporttips.de www.esporttips.de;
+
+    location / {
+        proxy_set_header X-Real-IP $remote_addr; 
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+        proxy_set_header Host $host; 
+        proxy_set_header X-NginX-Proxy true; 
+        proxy_pass http://localhost:3000/;
+        # set client body size to 3mb
+        client_max_body_size 3M;
+    }
+
+    # headers
+	add_header Strict-Transport-Security "max-age=31536000" always;
+	add_header Content-Security-Policy "default-src 'self' https:; font-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-src 'self'; connect-src 'self' https:; img-src 'self' https: blob: data:" always;
+	add_header X-Frame-Options "DENY" always;
+	add_header X-Content-Type-Options "nosniff" always;
+	add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+	add_header Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), display-capture=(), document-domain=(self), encrypted-media=(), execution-while-not-rendered=(self), execution-while-out-of-viewport=(), fullscreen=(self), gamepad=(), geolocation=(), gyroscope=(), hid=(), idle-detection=(self), local-fonts=(self), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(self), screen-wake-lock=(), serial=(), speaker-selection=(), usb=(), web-share=(), xr-spatial-tracking=()" always;
+
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/esporttips.de/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/esporttips.de/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+
+server {
+    if ($host = www.esporttips.de) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = esporttips.de) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    listen [::]:80;
+
+    server_name esporttips.de www.esporttips.de;
+    return 404; # managed by Certbot
+}

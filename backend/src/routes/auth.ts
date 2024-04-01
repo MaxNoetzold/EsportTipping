@@ -186,7 +186,7 @@ authRouter.delete(
         maxAge: 0,
         signed: true,
         httpOnly: true,
-        sameSite: "none",
+        sameSite: process.env.NODE_ENV === "production" ? "strict" : "none",
         secure: true,
       });
       res.send({ message: "Logged out" });
