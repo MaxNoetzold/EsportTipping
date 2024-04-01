@@ -41,14 +41,14 @@ if (process.env.NODE_ENV !== "production") {
 
 app.use(express.static("frontend"));
 
-app.get("/", (req: Request, res: Response) => {
-  res.sendFile("index.html", { root: "frontend" });
-});
-
 app.use("/api/schedule", scheduleRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/tipping", tippingRouter);
 app.use("/api/groups", tippingGroupRouter);
+
+app.get("*", (req: Request, res: Response) => {
+  res.sendFile("index.html", { root: "frontend" });
+});
 
 // General error handler
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
