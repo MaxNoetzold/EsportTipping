@@ -6,6 +6,7 @@ const getLecScheduleForSplit = async (splitName: string) => {
   // get all matches from database between start and end date
   const matches = await LecMatchModel.find({
     startTime: { $gte: splitTimes.start, $lte: splitTimes.end },
+    ["match.teams.0.name"]: { $ne: "TBD" },
   });
   return matches;
 };
