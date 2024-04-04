@@ -50,7 +50,7 @@ function TippingStats({ group }: { group: DetailedTippingGroup }) {
   }
 
   return (
-    <div className="p-4">
+    <div className="overflow-x-auto p-4">
       <table className="table-auto w-full">
         <thead>
           <tr>
