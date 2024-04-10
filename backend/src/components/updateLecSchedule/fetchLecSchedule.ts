@@ -22,11 +22,13 @@ const fetchLecScheduleIfNeeded = async () => {
   // if so, fetch the schedule
   const data = await fetchLecSchedule();
   // save the timestamp of the fetch
-  await FunctionRunTimerModel.updateOne(
-    { functionName: "fetchLecSchedule" },
-    { timestamp: new Date() },
-    { upsert: true }
-  );
+  if (data) {
+    await FunctionRunTimerModel.updateOne(
+      { functionName: "fetchLecSchedule" },
+      { timestamp: new Date() },
+      { upsert: true }
+    );
+  }
   return data;
 };
 
@@ -54,7 +56,11 @@ const fetchLecSchedule = async () => {
     ) {
       try {
         const json = await response.json();
-        data = formatLecEvents(json?.data?.esports?.events || []);
+        const newData = formatLecEvents(json?.data?.esports?.events || []);
+        // dont overwrite the data if it's already set
+        if (newData.length > 0 && !data) {
+          data = newData;
+        }
       } catch (err) {
         console.error("Process Response:", err);
       }
