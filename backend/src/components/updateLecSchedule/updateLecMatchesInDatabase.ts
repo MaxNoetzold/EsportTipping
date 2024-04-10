@@ -10,7 +10,7 @@ const updateLecMatchesInDatabase = async (lecMatches: GameEvent[]) => {
     },
   }));
 
-  await LecMatchModel.bulkWrite(bulkOps);
+  const res = await LecMatchModel.bulkWrite(bulkOps);
 };
 
 export default updateLecMatchesInDatabase;

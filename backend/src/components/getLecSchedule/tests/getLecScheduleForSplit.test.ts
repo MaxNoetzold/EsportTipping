@@ -1,7 +1,5 @@
-import { GameEvent } from "../../../utils/types/LecEvent";
 import getLecScheduleForSplit from "../getLecScheduleForSplit";
 import unfilteredLecSchedule from "../../../test/exampleData/formattedUnfilteredLecSchedule.json";
-import formatLecEvents from "../../updateLecSchedule/formatLecEvents";
 import updateLecMatchesInDatabase from "../../updateLecSchedule/updateLecMatchesInDatabase";
 import LecMatchModel from "../../../utils/mongodb/schemas/LecMatch";
 
