@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import getMeApi from "../../../../api/getMeApi";
-import { GameEventWithTip } from "../../../../types/LecEvent";
+import { IGameEventWithTip } from "../../../../types/GameEvent";
 import "./MatchTip.css";
 import SvgTipFilter from "./SvgTipFilter";
 import { useEffect, useState } from "react";
@@ -24,7 +24,7 @@ const getTeamFlagBorderClass = (
   return "";
 };
 
-function MatchTip({ match }: { match: GameEventWithTip }) {
+function MatchTip({ match }: { match: IGameEventWithTip }) {
   const queryClient = useQueryClient();
   const showError = useErrorSnackbar();
 

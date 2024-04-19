@@ -124,7 +124,7 @@ tippingGroupRouter.get(
       }
       const groupWithReadableUsers = await makeGroupUsersReadable(group);
       const userIds = [group.owner, ...group.members.map((m) => m.userId)];
-      const tips = await getTipsOfUsers(userIds, "2024_spring");
+      const tips = await getTipsOfUsers(userIds, "spring_2024");
 
       res.status(200).json({ ...groupWithReadableUsers, tips });
     } catch (error) {

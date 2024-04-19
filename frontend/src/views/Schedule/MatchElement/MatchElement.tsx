@@ -1,4 +1,4 @@
-import { GameEvent } from "../../../types/LecEvent";
+import { IGameEvent } from "../../../types/GameEvent";
 import DateInfo from "./DateInfo";
 import MatchTip from "./MatchTip/MatchTip";
 import Teams from "./Teams";
@@ -8,7 +8,7 @@ function MatchElement({
   match,
   isNext,
 }: {
-  match: GameEvent;
+  match: IGameEvent;
   isNext: boolean;
 }) {
   const elementRef = useRef<HTMLDivElement>(null);

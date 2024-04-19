@@ -1,52 +1,52 @@
-export interface League {
+export interface ILeague {
   id: string;
   image: string;
   name: string;
   slug: string;
 }
 
-export interface TeamResult {
+export interface ITeamResult {
   outcome: null | string;
   gameWins: number;
 }
 
-export interface TeamRecord {
+export interface ITeamRecord {
   wins: number;
   losses: number;
   ties: number;
 }
 
-export interface Team {
+export interface ITeam {
   name: string;
   code: string;
   image: string;
-  result: null | TeamResult;
-  record: null | TeamRecord;
+  result: null | ITeamResult;
+  record: null | ITeamRecord;
   side: null | "red" | "blue";
 }
 
-export interface Strategy {
+export interface IStrategy {
   type: string;
   count: number;
 }
 
-export interface Match {
+export interface IMatch {
   flags: string[];
-  teams: Team[];
-  strategy: Strategy;
+  teams: ITeam[];
+  strategy: IStrategy;
 }
 
-export interface Tournament {
+export interface ITournament {
   id: string;
   slug: string;
 }
 
-export interface GameEvent {
+export interface IGameEvent {
   blockName: string;
   matchId: string;
-  league: League;
-  match: Match;
+  league: ILeague;
+  match: IMatch;
   startTime: Date;
   state: string;
-  tournament: Tournament;
+  tournament: ITournament;
 }

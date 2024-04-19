@@ -1,6 +1,6 @@
 import formatLecEvents from "../formatLecEvents";
-import { GameEvent } from "../../../utils/types/LecEvent";
-import LecMatchModel from "../../../utils/mongodb/schemas/LecMatch";
+import { IGameEvent } from "../../../utils/types/GameEvent";
+import GameEvent from "../../../utils/mongodb/schemas/GameEvent";
 import springSplit2024RegularSchedule from "../../../test/exampleData/unformatedSpringSplit2024RegularSchedule.json";
 
 it("should correctly format events", () => {
@@ -11,11 +11,11 @@ it("should correctly format events", () => {
   events.splice(10);
 
   // Call the function with the data from the file
-  const formattedEvents: GameEvent[] = formatLecEvents(events);
+  const formattedEvents: IGameEvent[] = formatLecEvents(events);
 
-  // Validate each formatted event by checking if it fits the LecMatchModel schema
+  // Validate each formatted event by checking if it fits the GameEvent schema
   for (let i = 0; i < formattedEvents.length; i++) {
-    const event = new LecMatchModel(formattedEvents[i]);
+    const event = new GameEvent(formattedEvents[i]);
     let error = event.validateSync();
     expect(error).toBeUndefined();
   }

@@ -1,4 +1,4 @@
-import LecMatchModel from "../../utils/mongodb/schemas/LecMatch";
+import GameEvent from "../../utils/mongodb/schemas/GameEvent";
 import MatchTipModel from "../../utils/mongodb/schemas/MatchTip";
 
 const updateMatchTips = async () => {
@@ -7,7 +7,7 @@ const updateMatchTips = async () => {
     winningTeamCode: null,
   });
   // get all matches of these tips with match.teams[0].result.outcome === "win" | "loss"
-  const matches = await LecMatchModel.find({
+  const matches = await GameEvent.find({
     matchId: { $in: distinctMatchIds },
     $or: [
       { "match.teams.0.result.outcome": "win" },

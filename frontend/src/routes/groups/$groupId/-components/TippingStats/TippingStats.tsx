@@ -11,7 +11,7 @@ function TippingStats({ group }: { group: DetailedTippingGroup }) {
     error: matchesError,
   } = useQuery({
     queryKey: ["matches", "spring"],
-    queryFn: () => getMatchesApi("2024_spring"),
+    queryFn: () => getMatchesApi("spring_2024"),
   });
 
   if (matchesIsPending || matchesError) {

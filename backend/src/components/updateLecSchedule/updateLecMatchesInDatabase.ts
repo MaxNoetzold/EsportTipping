@@ -1,7 +1,7 @@
-import LecMatchModel from "../../utils/mongodb/schemas/LecMatch";
-import { GameEvent } from "../../utils/types/LecEvent";
+import GameEvent from "../../utils/mongodb/schemas/GameEvent";
+import { IGameEvent } from "../../utils/types/GameEvent";
 
-const updateLecMatchesInDatabase = async (lecMatches: GameEvent[]) => {
+const updateLecMatchesInDatabase = async (lecMatches: IGameEvent[]) => {
   const bulkOps = lecMatches.map((lecMatch) => ({
     updateOne: {
       filter: { matchId: lecMatch.matchId },
@@ -10,7 +10,7 @@ const updateLecMatchesInDatabase = async (lecMatches: GameEvent[]) => {
     },
   }));
 
-  const res = await LecMatchModel.bulkWrite(bulkOps);
+  const res = await GameEvent.bulkWrite(bulkOps);
 };
 
 export default updateLecMatchesInDatabase;

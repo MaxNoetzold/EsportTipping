@@ -55,6 +55,6 @@ const GameEventSchema = new Schema({
   tournament: { type: TournamentSchema, required: true },
 });
 
-const GameEventModel = mongoose.model("GameEvent", GameEventSchema);
+const GameEvent = mongoose.model("GameEvent", GameEventSchema);
 
-export default GameEventModel;
+export default GameEvent;

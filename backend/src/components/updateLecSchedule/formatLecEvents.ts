@@ -1,7 +1,7 @@
-import { GameEvent } from "../../utils/types/LecEvent";
+import { IGameEvent } from "../../utils/types/GameEvent";
 
 const formatLecEvents = (events: any[]) => {
-  const lecEvents: GameEvent[] = [];
+  const lecEvents: IGameEvent[] = [];
 
   for (const event of events) {
     try {

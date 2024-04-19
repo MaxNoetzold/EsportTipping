@@ -1,4 +1,4 @@
-import LecMatchModel from "../../utils/mongodb/schemas/LecMatch";
+import GameEvent from "../../utils/mongodb/schemas/GameEvent";
 import MatchTipModel from "../../utils/mongodb/schemas/MatchTip";
 
 const postMatchTip = async (
@@ -7,7 +7,7 @@ const postMatchTip = async (
   discordUserId: string
 ) => {
   // get the match
-  const match = await LecMatchModel.findOne({ matchId }).lean();
+  const match = await GameEvent.findOne({ matchId }).lean();
   if (!match) {
     throw new Error("Match not found");
   }

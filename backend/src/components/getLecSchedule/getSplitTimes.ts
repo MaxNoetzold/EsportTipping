@@ -5,7 +5,7 @@ import {
 
 const getSplitTimes = (splitName: string) => {
   switch (splitName) {
-    case "2024_spring": {
+    case "spring_2024": {
       return {
         start: START_DATE_SPRING_2024,
         end: END_DATE_SPRING_2024,

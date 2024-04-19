@@ -1,10 +1,10 @@
-import { Team } from "../../../../types/LecEvent";
+import { ITeam } from "../../../../types/GameEvent";
 
 function SingleTeam({
   team,
   isRightSide,
 }: {
-  team: Team;
+  team: ITeam;
   isRightSide: boolean;
 }) {
   return (

@@ -1,6 +1,6 @@
-import { Team } from "../../../../types/LecEvent";
+import { ITeam } from "../../../../types/GameEvent";
 
-function MatchResult({ teams }: { teams: Team[] }) {
+function MatchResult({ teams }: { teams: ITeam[] }) {
   const displayResult =
     teams[0].result.outcome === null || teams[1].result.outcome === null
       ? "vs."

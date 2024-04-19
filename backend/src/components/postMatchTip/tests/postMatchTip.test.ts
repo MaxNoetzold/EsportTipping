@@ -1,5 +1,5 @@
 import postMatchTip from "../postMatchTip";
-import LecMatchModel from "../../../utils/mongodb/schemas/LecMatch";
+import GameEvent from "../../../utils/mongodb/schemas/GameEvent";
 import MatchTipModel from "../../../utils/mongodb/schemas/MatchTip";
 
 jest.mock("../../../utils/mongodb/schemas/LecMatch");
@@ -15,13 +15,13 @@ describe("postMatchTip", () => {
       startTime: new Date(Date.now() + 1000 * 60 * 60 * 2),
     };
 
-    (LecMatchModel.findOne as jest.Mock).mockReturnValue({
+    (GameEvent.findOne as jest.Mock).mockReturnValue({
       lean: jest.fn().mockResolvedValue(mockMatch),
     });
 
     const result = await postMatchTip(matchId, teamId, discordUserId);
 
-    expect(LecMatchModel.findOne).toHaveBeenCalledWith({ matchId });
+    expect(GameEvent.findOne).toHaveBeenCalledWith({ matchId });
 
     // check in the memory database
     const matchInDb = await MatchTipModel.findOne({
@@ -47,7 +47,7 @@ describe("postMatchTip", () => {
       startTime: new Date(Date.now() + 1000 * 60 * 60 * 2),
     };
 
-    (LecMatchModel.findOne as jest.Mock).mockReturnValue({
+    (GameEvent.findOne as jest.Mock).mockReturnValue({
       lean: jest.fn().mockResolvedValue(mockMatch),
     });
 
@@ -74,7 +74,7 @@ describe("postMatchTip", () => {
       startTime: new Date(Date.now() - 1000 * 60 * 60 * 2),
     };
 
-    (LecMatchModel.findOne as jest.Mock).mockReturnValue({
+    (GameEvent.findOne as jest.Mock).mockReturnValue({
       lean: jest.fn().mockResolvedValue(mockMatch),
     });
 

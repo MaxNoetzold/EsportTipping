@@ -2,7 +2,7 @@
 
 import puppeteer, { HTTPResponse, HTTPRequest } from "puppeteer";
 import UserAgent from "user-agents";
-import { GameEvent } from "../../utils/types/LecEvent";
+import { IGameEvent } from "../../utils/types/GameEvent";
 import formatLecEvents from "./formatLecEvents";
 import FunctionRunTimerModel from "../../utils/mongodb/schemas/FunctionRunTimers";
 
@@ -33,7 +33,7 @@ const fetchLecScheduleIfNeeded = async () => {
 };
 
 const fetchLecSchedule = async () => {
-  let data: GameEvent[] | undefined;
+  let data: IGameEvent[] | undefined;
 
   // detect the getSchedule request, manipulate it and get the response
   const processRequest = (request: HTTPRequest) => {

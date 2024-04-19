@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import getMatchesApi from "../../api/getMatchesApi";
 import Loading from "../../components/Loading";
 import MatchElement from "./MatchElement/MatchElement";
-import { GameEvent } from "../../types/LecEvent";
+import { IGameEvent } from "../../types/GameEvent";
 import getMatchTipsApi from "../../api/getMatchTipsApi";
 import { useErrorSnackbar } from "../../components/ErrorSnackbar";
 import { useEffect } from "react";
@@ -17,11 +17,11 @@ function Schedule() {
     error: matchesError,
   } = useQuery({
     queryKey: ["matches", "spring"],
-    queryFn: () => getMatchesApi("2024_spring"),
+    queryFn: () => getMatchesApi("spring_2024"),
   });
   const { data: tips, error: tipsError } = useQuery({
     queryKey: ["tips", "spring", "me"],
-    queryFn: () => getMatchTipsApi("2024_spring"),
+    queryFn: () => getMatchTipsApi("spring_2024"),
   });
 
   useEffect(() => {
@@ -38,14 +38,14 @@ function Schedule() {
     return <Loading />;
   }
 
-  const matchesWithTips = (matches || []).map((match: GameEvent) => {
+  const matchesWithTips = (matches || []).map((match: IGameEvent) => {
     const tip = tips?.find((t) => t.matchId === match.matchId);
     return { ...match, tip };
   });
 
   return (
     <div className="w-full">
-      {matchesWithTips.map((match: GameEvent) => (
+      {matchesWithTips.map((match: IGameEvent) => (
         <MatchElement
           match={match}
           isNext={isNextMatch(match.matchId, matchesWithTips)}

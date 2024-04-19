@@ -1,7 +1,7 @@
-import { Team } from "../../../../../types/LecEvent";
+import { ITeam } from "../../../../../types/GameEvent";
 
-function TeamHeader({ teams }: { teams: Team[] }) {
-  const getColorOfTeam = (team: Team) => {
+function TeamHeader({ teams }: { teams: ITeam[] }) {
+  const getColorOfTeam = (team: ITeam) => {
     const noWinner =
       teams[0].result.outcome === null || teams[1].result.outcome === null;
     const winner =

@@ -16,7 +16,7 @@ function TippingTable({ group }: { group: DetailedTippingGroup }) {
     error: matchesError,
   } = useQuery({
     queryKey: ["matches", "spring"],
-    queryFn: () => getMatchesApi("2024_spring"),
+    queryFn: () => getMatchesApi("spring_2024"),
   });
 
   useEffect(() => {
