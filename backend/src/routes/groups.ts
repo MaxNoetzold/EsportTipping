@@ -13,6 +13,7 @@ import addMemberToGroup from "../components/addMemberToGroup";
 import makeGroupUsersReadable from "../components/makeGroupUsersReadable";
 import UserModel from "../utils/mongodb/schemas/User";
 import getTipsOfUsers from "../components/getTipsOfUsers/getTipsOfUsers";
+import getLatestSplitForLeague from "../components/getLatestSplitForTournament";
 
 const tippingGroupRouter = express.Router();
 
@@ -124,7 +125,10 @@ tippingGroupRouter.get(
       }
       const groupWithReadableUsers = await makeGroupUsersReadable(group);
       const userIds = [group.owner, ...group.members.map((m) => m.userId)];
-      const tips = await getTipsOfUsers(userIds, "spring_2024");
+
+      // Todo make it a param in the future
+      const latestSplit = await getLatestSplitForLeague(group.league);
+      const tips = await getTipsOfUsers(userIds, latestSplit);
 
       res.status(200).json({ ...groupWithReadableUsers, tips });
     } catch (error) {

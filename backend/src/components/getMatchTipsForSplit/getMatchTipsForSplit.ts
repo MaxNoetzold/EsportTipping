@@ -1,11 +1,11 @@
 import MatchTipModel from "../../utils/mongodb/schemas/MatchTip";
-import getLecScheduleForSplit from "../getLecSchedule";
+import getGameEventsForTournament from "../getGameEventsForTournament";
 
 const getMatchTipsForSplit = async (
   splitName: string,
   discordUserId: string
 ) => {
-  const matches = await getLecScheduleForSplit(splitName);
+  const matches = await getGameEventsForTournament(splitName);
   const matchIds = matches.map((match) => match.matchId);
 
   const tips = await MatchTipModel.find({

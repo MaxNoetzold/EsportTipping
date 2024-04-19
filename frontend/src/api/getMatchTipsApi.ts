@@ -2,6 +2,7 @@ import axios from "axios";
 import { getAPI } from ".";
 import { MatchTip } from "../types/MatchTip";
 
+// TODO: league and splitname should be parameters
 const getMatchTipsApi = async (splitName: string) => {
   try {
     const api = getAPI();

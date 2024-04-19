@@ -2,7 +2,7 @@ import postMatchTip from "../postMatchTip";
 import GameEvent from "../../../utils/mongodb/schemas/GameEvent";
 import MatchTipModel from "../../../utils/mongodb/schemas/MatchTip";
 
-jest.mock("../../../utils/mongodb/schemas/LecMatch");
+jest.mock("../../../utils/mongodb/schemas/GameEvent");
 
 describe("postMatchTip", () => {
   it("should post a match tip", async () => {

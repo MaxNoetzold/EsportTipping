@@ -1,7 +1,7 @@
-import updateLecMatchesInDatabase from "../updateLecMatchesInDatabase";
 import GameEvent from "../../../utils/mongodb/schemas/GameEvent";
 import formattedSpringSplit2024RegularSchedule from "../../../test/exampleData/formattedSpringSplit2024RegularSchedule.json";
 import { IGameEvent } from "../../../utils/types/GameEvent";
+import updateGameEventsInDatabase from "../updateGameEventsInDatabase";
 
 it("should update the database with the provided LEC matches", async () => {
   const lecMatches: IGameEvent[] = JSON.parse(
@@ -9,7 +9,7 @@ it("should update the database with the provided LEC matches", async () => {
   );
 
   // Call the function to update the database
-  await updateLecMatchesInDatabase(lecMatches);
+  await updateGameEventsInDatabase(lecMatches);
 
   // Verify that the LEC matches were correctly updated in the database
   for (const lecMatch of lecMatches) {

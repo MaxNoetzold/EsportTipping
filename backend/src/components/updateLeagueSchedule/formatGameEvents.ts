@@ -1,7 +1,7 @@
 import { IGameEvent } from "../../utils/types/GameEvent";
 
-const formatLecEvents = (events: any[]) => {
-  const lecEvents: IGameEvent[] = [];
+const formatGameEvents = (events: any[]) => {
+  const gameEvents: IGameEvent[] = [];
 
   for (const event of events) {
     try {
@@ -34,14 +34,14 @@ const formatLecEvents = (events: any[]) => {
       delete eventCopy.match.matchTeams;
       delete eventCopy.match.state;
 
-      lecEvents.push(eventCopy);
+      gameEvents.push(eventCopy);
     } catch (error) {
-      console.error("Error formatting LEC event", error, event);
+      console.error("Error formatting Game event", error, event);
       // continue to next event
     }
   }
 
-  return lecEvents;
+  return gameEvents;
 };
 
-export default formatLecEvents;
+export default formatGameEvents;

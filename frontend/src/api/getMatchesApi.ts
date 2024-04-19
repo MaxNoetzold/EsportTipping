@@ -2,6 +2,7 @@ import axios from "axios";
 import { getAPI } from ".";
 import { IGameEvent } from "../types/GameEvent";
 
+// TODO: league & splitname
 const getMatchesApi = async (splitName: string) => {
   try {
     const api = getAPI();

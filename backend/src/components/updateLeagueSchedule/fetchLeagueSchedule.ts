@@ -3,13 +3,13 @@
 import puppeteer, { HTTPResponse, HTTPRequest } from "puppeteer";
 import UserAgent from "user-agents";
 import { IGameEvent } from "../../utils/types/GameEvent";
-import formatLecEvents from "./formatLecEvents";
+import formatGameEvents from "./formatGameEvents";
 import FunctionRunTimerModel from "../../utils/mongodb/schemas/FunctionRunTimers";
 
-const fetchLecScheduleIfNeeded = async () => {
+const fetchLeagueScheduleIfNeeded = async (leagueSlug: string) => {
   // check in the database if the last fetch was more than an hour ago
   const timer = await FunctionRunTimerModel.findOne({
-    functionName: "fetchLecSchedule",
+    functionName: `fetchLeagueSchedule(${leagueSlug})`,
   }).lean();
   if (timer) {
     const now = new Date();
@@ -20,11 +20,11 @@ const fetchLecScheduleIfNeeded = async () => {
   }
 
   // if so, fetch the schedule
-  const data = await fetchLecSchedule();
+  const data = await fetchLeagueSchedule(leagueSlug);
   // save the timestamp of the fetch
   if (data) {
     await FunctionRunTimerModel.updateOne(
-      { functionName: "fetchLecSchedule" },
+      { functionName: `fetchLeagueSchedule(${leagueSlug})` },
       { timestamp: new Date() },
       { upsert: true }
     );
@@ -32,7 +32,7 @@ const fetchLecScheduleIfNeeded = async () => {
   return data;
 };
 
-const fetchLecSchedule = async () => {
+const fetchLeagueSchedule = async (leagueSlug: string) => {
   let data: IGameEvent[] | undefined;
 
   // detect the getSchedule request, manipulate it and get the response
@@ -56,7 +56,7 @@ const fetchLecSchedule = async () => {
     ) {
       try {
         const json = await response.json();
-        const newData = formatLecEvents(json?.data?.esports?.events || []);
+        const newData = formatGameEvents(json?.data?.esports?.events || []);
         // dont overwrite the data if it's already set
         if (newData.length > 0 && !data) {
           data = newData;
@@ -81,7 +81,9 @@ const fetchLecSchedule = async () => {
     console.error("Request failed", request.url());
   });
   // open the actual page
-  await page.goto("https://lolesports.com/en-GB/schedule?leagues=lec");
+  await page.goto(
+    `https://lolesports.com/en-GB/schedule?leagues=${leagueSlug}`
+  );
   // wait for the responses to be finished
   await page.waitForNetworkIdle();
   await browser.close();
@@ -89,4 +91,4 @@ const fetchLecSchedule = async () => {
   return data;
 };
 
-export default fetchLecScheduleIfNeeded;
+export default fetchLeagueScheduleIfNeeded;

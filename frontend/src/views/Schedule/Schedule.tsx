@@ -17,11 +17,11 @@ function Schedule() {
     error: matchesError,
   } = useQuery({
     queryKey: ["matches", "spring"],
-    queryFn: () => getMatchesApi("spring_2024"),
+    queryFn: () => getMatchesApi("lec_spring_2024"),
   });
   const { data: tips, error: tipsError } = useQuery({
     queryKey: ["tips", "spring", "me"],
-    queryFn: () => getMatchTipsApi("spring_2024"),
+    queryFn: () => getMatchTipsApi("lec_spring_2024"),
   });
 
   useEffect(() => {

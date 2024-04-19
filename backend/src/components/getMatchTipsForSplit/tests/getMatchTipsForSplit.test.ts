@@ -1,8 +1,8 @@
 import getMatchTipsForSplit from "../getMatchTipsForSplit";
-import getLecScheduleForSplit from "../../getLecSchedule";
+import getGameEventsForTournament from "../../getGameEventsForTournament";
 import MatchTipModel from "../../../utils/mongodb/schemas/MatchTip";
 
-jest.mock("../../getLecSchedule");
+jest.mock("../../getGameEventsForTournament");
 jest.mock("../../../utils/mongodb/schemas/MatchTip");
 
 describe("getMatchTipsForSplit", () => {
@@ -13,13 +13,13 @@ describe("getMatchTipsForSplit", () => {
       { matchId: "2", discordUserId: "user1" },
     ];
 
-    (getLecScheduleForSplit as jest.Mock).mockResolvedValue(mockMatches);
+    (getGameEventsForTournament as jest.Mock).mockResolvedValue(mockMatches);
     (MatchTipModel.find as jest.Mock).mockReturnValue({
       lean: jest.fn().mockResolvedValue(mockTips),
     });
     const result = await getMatchTipsForSplit("split1", "user1");
 
-    expect(getLecScheduleForSplit).toHaveBeenCalledWith("split1");
+    expect(getGameEventsForTournament).toHaveBeenCalledWith("split1");
     expect(MatchTipModel.find).toHaveBeenCalledWith({
       discordUserId: "user1",
       matchId: { $in: ["1", "2", "3"] },
