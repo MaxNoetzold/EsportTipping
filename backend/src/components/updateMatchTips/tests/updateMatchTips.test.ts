@@ -1,7 +1,7 @@
 import LecMatchModel from "../../../utils/mongodb/schemas/LecMatch";
 import MatchTipModel from "../../../utils/mongodb/schemas/MatchTip";
 import updateMatchTips from "../updateMatchTips";
-import completedLecMatch from "../../../test/exampleData/completedLecMatch.json";
+import completedLecMatch from "../../../test/exampleData/formattedCompletedLecMatch.json";
 import incompletedMatchTip from "../../../test/exampleData/incompletedMatchTip.json";
 
 describe("updateMatchTips", () => {

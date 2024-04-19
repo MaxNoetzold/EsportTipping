@@ -1,0 +1,4322 @@
+[
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170246",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170246",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170246:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170246:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-09T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552104652",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104652",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552104652:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104652:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-09T17:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552104656",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104656",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552104656:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104656:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-09T18:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552104672",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104672",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552104672:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552104672:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-09T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170250",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170250",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170250:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170250:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-09T20:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170228",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170228",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170228:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170228:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-10T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552104644",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104644",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552104644:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104644:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-10T17:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170218",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170218",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170218:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552170218:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-10T18:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170236",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170236",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170236:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170236:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-10T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552104662",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104662",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552104662:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104662:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-10T20:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552104640",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104640",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104640:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552104640:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-11T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170256",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170256",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170256:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170256:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-11T17:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170234",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170234",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170234:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170234:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-11T18:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552170248",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170248",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170248:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170248:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-11T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 1",
+    "id": "111997906552104654",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104654",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104654:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552104654:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-11T20:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170226",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170226",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170226:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170226:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-16T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170240",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170240",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170240:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170240:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-16T16:45:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552104660",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104660",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104660:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552104660:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-16T17:30:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170252",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170252",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170252:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170252:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-16T18:15:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552104638",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104638",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552104638:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104638:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-16T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170220",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170220",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170220:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170220:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-17T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552104650",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104650",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104650:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552104650:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-17T16:45:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170212",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170212",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170212:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552170212:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-17T17:30:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170244",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170244",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170244:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170244:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-17T18:15:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552104668",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104668",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552104668:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104668:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-17T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170222",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170222",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170222:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170222:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-18T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170260",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170260",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170260:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170260:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-18T16:45:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552104658",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104658",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104658:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552104658:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-18T17:30:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552104646",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104646",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104646:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552104646:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-18T18:15:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 2",
+    "id": "111997906552170214",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170214",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170214:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552170214:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-18T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552104642",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104642",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552104642:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104642:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-22T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170230",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170230",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170230:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170230:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-22T16:45:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552104664",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104664",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104664:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552104664:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-22T17:30:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170242",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170242",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170242:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170242:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-22T18:15:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170216",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170216",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170216:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552170216:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-22T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170258",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170258",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170258:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170258:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-23T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170238",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170238",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170238:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170238:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-23T16:45:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170224",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170224",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170224:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170224:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-23T17:30:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552039100",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552039100",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552039100:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552039100:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-23T18:15:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552104674",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104674",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552104674:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552104674:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-23T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170232",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170232",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170232:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170232:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-25T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552104648",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104648",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "111997906552104648:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552104648:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-25T16:45:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552170254",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170254",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170254:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170254:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 5,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-25T17:30:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552104666",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104666",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552104666:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552104666:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 3,
+            "ties": 0,
+            "wins": 6
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-25T18:15:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "111997906552104670",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552104670",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "KC",
+          "id": "111997906552104670:111692118851466302",
+          "image": "http://static.lolesports.com/teams/1704714951336_KC.png",
+          "name": "Karmine Corp",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552104670:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 4,
+            "ties": 0,
+            "wins": 5
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-25T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Week 3",
+    "id": "112158029082863928",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "112158029082863928",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "RGE",
+          "id": "112158029082863928:101383793574360315",
+          "image": "http://static.lolesports.com/teams/1705054928404_RGE.png",
+          "name": "Rogue",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 7,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "112158029082863928:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 6,
+            "ties": 0,
+            "wins": 4
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 1,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-25T19:45:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170270",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170270",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170270:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170270:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 0
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-30T16:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170262",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170262",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170262:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170262:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 0
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-30T19:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170274",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170274",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170274:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 1
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170274:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-31T15:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170266",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod"
+      ],
+      "id": "111997906552170266",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552170266:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 0,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170266:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 1
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-03-31T18:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170282",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170282",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170282:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170282:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-01T15:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170278",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170278",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170278:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552170278:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 0,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-01T18:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170290",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170290",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170290:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 1
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "SK",
+          "id": "111997906552170290:101383793567806688",
+          "image": "http://static.lolesports.com/teams/1643979272144_SK_Monochrome.png",
+          "name": "SK Gaming",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 0
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-02T15:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170286",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170286",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "GX",
+          "id": "111997906552170286:101383793572656373",
+          "image": "http://static.lolesports.com/teams/1704790322129_GX.png",
+          "name": "GIANTX",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 0
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "loss"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170286:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 1
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-02T18:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170298",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170298",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170298:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "TH",
+          "id": "111997906552170298:109637393694097670",
+          "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+          "name": "Team Heretics",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 1
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-06T15:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170294",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170294",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170294:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 2,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "MDK",
+          "id": "111997906552170294:103461966965149786",
+          "image": "http://static.lolesports.com/teams/1631819614211_mad-2021-worlds.png",
+          "name": "MAD Lions KOI",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 1
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 3,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-06T17:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170302",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170302",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552170302:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 0,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 3,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170302:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 5,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-07T15:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170308",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "hasVod",
+        "isSpoiler"
+      ],
+      "id": "111997906552170308",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170308:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 3,
+            "outcome": "win"
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "VIT",
+          "id": "111997906552170308:99322214695067838",
+          "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+          "name": "Team Vitality",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 2,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 1,
+            "outcome": "loss"
+          },
+          "side": "red"
+        }
+      ],
+      "state": "completed",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 5,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-08T15:00:00Z",
+    "state": "completed",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "playoffs",
+    "id": "111997906552170314",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "isSpoiler"
+      ],
+      "id": "111997906552170314",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "BDS",
+          "id": "111997906552170314:107563714667537640",
+          "image": "http://static.lolesports.com/teams/1641292031788_Team_BDSlogo_square.png",
+          "name": "Team BDS",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 2
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": null
+          },
+          "side": "blue"
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "FNC",
+          "id": "111997906552170314:98767991866488695",
+          "image": "http://static.lolesports.com/teams/1631819669150_fnc-2021-worlds.png",
+          "name": "Fnatic",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 1,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": null
+          },
+          "side": "red"
+        }
+      ],
+      "state": "unstarted",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 5,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-13T15:00:00Z",
+    "state": "unstarted",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  },
+  {
+    "__typename": "EventMatch",
+    "blockName": "Finals",
+    "id": "111997906552170320",
+    "league": {
+      "__typename": "League",
+      "id": "98767991302996019",
+      "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+      "name": "LEC",
+      "slug": "lec"
+    },
+    "match": {
+      "__typename": "Match",
+      "flags": [
+        "isSpoiler"
+      ],
+      "id": "111997906552170320",
+      "matchTeams": [
+        {
+          "__typename": "MatchTeam",
+          "code": "TBD",
+          "id": "111997906552170320:0",
+          "image": "https://static.lolesports.com/teams/team-tbd.png",
+          "name": "TBD",
+          "record": null,
+          "result": null,
+          "side": null
+        },
+        {
+          "__typename": "MatchTeam",
+          "code": "G2",
+          "id": "111997906552170320:98767991926151025",
+          "image": "http://static.lolesports.com/teams/G2-FullonDark.png",
+          "name": "G2 Esports",
+          "record": {
+            "__typename": "TeamRecord",
+            "losses": 0,
+            "ties": 0,
+            "wins": 3
+          },
+          "result": {
+            "__typename": "TeamResult",
+            "gameWins": 0,
+            "outcome": null
+          },
+          "side": "red"
+        }
+      ],
+      "state": "unstarted",
+      "strategy": {
+        "__typename": "MatchStrategy",
+        "count": 5,
+        "type": "bestOf"
+      }
+    },
+    "startTime": "2024-04-14T15:00:00Z",
+    "state": "unstarted",
+    "tournament": {
+      "__typename": "Tournament",
+      "id": "111997906550466231",
+      "slug": "lec_spring_2024"
+    }
+  }
+]

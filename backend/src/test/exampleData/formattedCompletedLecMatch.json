@@ -1,0 +1,94 @@
+{
+  "blockName": "Week 1",
+  "id": "111997906552170246",
+  "league": {
+    "id": "98767991302996019",
+    "image": "http://static.lolesports.com/leagues/1592516184297_LEC-01-FullonDark.png",
+    "name": "LEC",
+    "slug": "lec"
+  },
+  "match": {
+    "flags": ["hasVod"],
+    "matchTeams": [
+      {
+        "code": "VIT",
+        "id": "111997906552170246:99322214695067838",
+        "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+        "name": "Team Vitality",
+        "record": {
+          "losses": 3,
+          "ties": 0,
+          "wins": 6
+        },
+        "result": {
+          "gameWins": 1,
+          "outcome": "win"
+        },
+        "side": "blue"
+      },
+      {
+        "code": "TH",
+        "id": "111997906552170246:109637393694097670",
+        "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+        "name": "Team Heretics",
+        "record": {
+          "losses": 3,
+          "ties": 0,
+          "wins": 6
+        },
+        "result": {
+          "gameWins": 0,
+          "outcome": "loss"
+        },
+        "side": "red"
+      }
+    ],
+    "strategy": {
+      "count": 1,
+      "type": "bestOf"
+    },
+    "teams": [
+      {
+        "name": "Team Vitality",
+        "code": "VIT",
+        "image": "http://static.lolesports.com/teams/1675865863968_Vitality_FullColor.png",
+        "result": {
+          "__typename": "TeamResult",
+          "gameWins": 1,
+          "outcome": "win"
+        },
+        "record": {
+          "__typename": "TeamRecord",
+          "losses": 3,
+          "ties": 0,
+          "wins": 6
+        },
+        "side": "blue"
+      },
+      {
+        "name": "Team Heretics",
+        "code": "TH",
+        "image": "http://static.lolesports.com/teams/1672933861879_Heretics-Full-Color.png",
+        "result": {
+          "__typename": "TeamResult",
+          "gameWins": 0,
+          "outcome": "loss"
+        },
+        "record": {
+          "__typename": "TeamRecord",
+          "losses": 3,
+          "ties": 0,
+          "wins": 6
+        },
+        "side": "red"
+      }
+    ]
+  },
+  "startTime": "2024-03-09T16:00:00.000Z",
+  "state": "completed",
+  "tournament": {
+    "id": "111997906550466231",
+    "slug": "lec_spring_2024"
+  },
+  "matchId": "111997906552170246"
+}

@@ -1,7 +1,7 @@
 import formatLecEvents from "../formatLecEvents";
 import { GameEvent } from "../../../utils/types/LecEvent";
 import LecMatchModel from "../../../utils/mongodb/schemas/LecMatch";
-import springSplit2024RegularSchedule from "../../../test/exampleData/springSplit2024RegularSchedule.json";
+import springSplit2024RegularSchedule from "../../../test/exampleData/unformatedSpringSplit2024RegularSchedule.json";
 
 it("should correctly format events", () => {
   const events: any[] = JSON.parse(

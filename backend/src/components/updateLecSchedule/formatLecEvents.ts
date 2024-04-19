@@ -17,10 +17,10 @@ const formatLecEvents = (events: any[]) => {
 
       eventCopy.startTime = new Date(event.startTime);
       eventCopy.matchId = event.id;
-      delete event.id;
+      delete eventCopy.id;
       delete eventCopy.match.id;
 
-      eventCopy.match.teams = event.match.matchTeams.map((team: any) => {
+      eventCopy.match.teams = eventCopy.match.matchTeams.map((team: any) => {
         return {
           name: team.name,
           code: team.code,
@@ -31,6 +31,7 @@ const formatLecEvents = (events: any[]) => {
         };
       });
 
+      delete eventCopy.match.matchTeams;
       delete eventCopy.match.state;
 
       lecEvents.push(eventCopy);

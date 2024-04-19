@@ -17,10 +17,10 @@ test("gets all matches for 2024_spring", async () => {
   // Safe the matches in the database
   await updateLecMatchesInDatabase(unfilteredLecMatches);
   // check that all 80 matches are in the database
-  const matchesInDatabase = await LecMatchModel.find({ type: "match" }).lean();
+  const matchesInDatabase = await LecMatchModel.find({}).lean();
   expect(matchesInDatabase).toHaveLength(80);
 
   // get the matches for 2024_spring
   const matchesFor2024Spring = await getLecScheduleForSplit("2024_spring");
-  expect(matchesFor2024Spring).toHaveLength(40);
+  expect(matchesFor2024Spring).toHaveLength(60);
 });
