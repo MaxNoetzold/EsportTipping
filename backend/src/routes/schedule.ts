@@ -8,14 +8,18 @@ import updateLeagueSchedule from "../components/updateLeagueSchedule";
 const router = express.Router();
 
 router.get("/", async (req: Request, res: Response, next: NextFunction) => {
-  const { league = "lec" } = req.query as { league?: string; split?: string };
+  const { league = "lec" } = req.query as {
+    league?: string;
+    tournament?: string;
+  };
   try {
-    const { split = await getLatestSplitForLeague(league) } = req.query as {
-      league?: string;
-      split?: string;
-    };
+    const { tournament = await getLatestSplitForLeague(league) } =
+      req.query as {
+        league?: string;
+        tournament?: string;
+      };
 
-    const matches = await getGameEventsForTournament(split);
+    const matches = await getGameEventsForTournament(tournament);
 
     res.status(200).json(matches);
   } catch (error) {

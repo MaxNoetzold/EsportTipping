@@ -88,7 +88,12 @@ const fetchLeagueSchedule = async (leagueSlug: string) => {
   await page.waitForNetworkIdle();
   await browser.close();
 
-  return data;
+  // filter out the (live) events from other leagues
+  const filteredData = data?.filter(
+    (event) => event.league.slug === leagueSlug
+  );
+
+  return filteredData;
 };
 
 export default fetchLeagueScheduleIfNeeded;

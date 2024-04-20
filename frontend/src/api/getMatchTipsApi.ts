@@ -2,15 +2,30 @@ import axios from "axios";
 import { getAPI } from ".";
 import { MatchTip } from "../types/MatchTip";
 
-// TODO: league and splitname should be parameters
-const getMatchTipsApi = async (splitName: string) => {
+const getMatchTipsApi = async ({
+  league,
+  tournament,
+}: {
+  league?: string;
+  tournament?: string;
+}) => {
   try {
+    const params: {
+      league?: string;
+      tournament?: string;
+    } = {};
+    if (league) {
+      params.league = league;
+    }
+    if (tournament) {
+      params.tournament = tournament;
+    }
+    if (!league && !tournament) {
+      throw new Error("Either league or tournament must be provided");
+    }
+
     const api = getAPI();
-    const response = await api.get("/api/tipping", {
-      params: {
-        split: splitName,
-      },
-    });
+    const response = await api.get("/api/tipping", { params });
     return response.data as MatchTip[];
   } catch (error) {
     if (axios.isAxiosError(error)) {

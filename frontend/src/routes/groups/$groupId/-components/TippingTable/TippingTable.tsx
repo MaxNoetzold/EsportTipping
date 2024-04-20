@@ -15,8 +15,8 @@ function TippingTable({ group }: { group: DetailedTippingGroup }) {
     data: matches = [],
     error: matchesError,
   } = useQuery({
-    queryKey: ["matches", "spring"],
-    queryFn: () => getMatchesApi("lec_spring_2024"),
+    queryKey: ["matches", group.league],
+    queryFn: () => getMatchesApi({ league: group.league }),
   });
 
   useEffect(() => {

@@ -16,12 +16,13 @@ function Schedule() {
     data: matches,
     error: matchesError,
   } = useQuery({
-    queryKey: ["matches", "spring"],
-    queryFn: () => getMatchesApi("lec_spring_2024"),
+    queryKey: ["matches", "lec"],
+    queryFn: () => getMatchesApi({ league: "lec" }),
   });
   const { data: tips, error: tipsError } = useQuery({
-    queryKey: ["tips", "spring", "me"],
-    queryFn: () => getMatchTipsApi("lec_spring_2024"),
+    queryKey: ["tips", "lec_spring_2024", "me"],
+    queryFn: () =>
+      getMatchTipsApi({ league: "lec", tournament: "lec_spring_2024" }),
   });
 
   useEffect(() => {

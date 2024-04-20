@@ -7,6 +7,7 @@ import routeLogger from "./middlewares/routeLogger";
 import tippingRouter from "./routes/tipping";
 import bodyParser from "body-parser";
 import tippingGroupRouter from "./routes/groups";
+import leagueRouter from "./routes/league";
 
 const app = express();
 
@@ -45,6 +46,7 @@ app.use("/api/schedule", scheduleRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/tipping", tippingRouter);
 app.use("/api/groups", tippingGroupRouter);
+app.use("/api/leagues", leagueRouter);
 
 app.get("*", (req: Request, res: Response) => {
   res.sendFile("index.html", { root: "frontend" });
