@@ -58,7 +58,7 @@ const fetchLeagueSchedule = async (leagueSlug: string) => {
         const json = await response.json();
         const newData = formatGameEvents(json?.data?.esports?.events || []);
         // dont overwrite the data if it's already set
-        if (newData.length > 0 && !data) {
+        if (newData.length > 0 && (!data || newData.length > data.length)) {
           data = newData;
         }
       } catch (err) {
