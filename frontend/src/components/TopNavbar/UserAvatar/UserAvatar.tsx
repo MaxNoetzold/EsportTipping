@@ -24,7 +24,7 @@ function UserAvatar() {
 
   useEffect(() => {
     if (userError) {
-      showError(userError.message);
+      showError(`UserAvatar_userError: ${userError.message}`);
     }
   }, [userError, showError]);
 

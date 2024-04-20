@@ -21,7 +21,7 @@ function GroupDeleteButton({ groupId }: { groupId: string }) {
   const deleteGroupMutation = useMutation({
     mutationFn: () => deleteGroupApi(groupId),
     onError: (error) => {
-      showError(error.message);
+      showError(`GroupDeleteButton_deleteGroupError: ${error.message}`);
     },
     onSuccess: () => {
       queryClient.fetchQuery({ queryKey: ["group", "all"] });

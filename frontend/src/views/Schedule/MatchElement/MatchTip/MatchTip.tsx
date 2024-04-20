@@ -55,7 +55,7 @@ function MatchTip({ match }: { match: IGameEventWithTip }) {
       return tippedTeam;
     },
     onError: (error, _variables, context) => {
-      showError(error.message);
+      showError(`MatchTip_mutateTipError: ${error.message}`);
       if (context) {
         setTippedTeam(context);
       } else {

@@ -31,7 +31,7 @@ function CreateNewGroup() {
       }
     },
     onError: (error) => {
-      showError(error.message);
+      showError(`CreateNewGroup_createGroupError: ${error.message}`);
     },
     onSuccess() {
       queryClient.fetchQuery({

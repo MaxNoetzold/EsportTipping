@@ -32,7 +32,7 @@ function TippingTable({
 
   useEffect(() => {
     if (matchesError) {
-      showError(matchesError.message);
+      showError(`TippingTable_matchesError: ${matchesError.message}`);
     }
   }, [matchesError, showError]);
 

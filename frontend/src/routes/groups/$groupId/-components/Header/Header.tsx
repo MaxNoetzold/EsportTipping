@@ -34,7 +34,7 @@ function Header({
   // Display errors of querys
   useEffect(() => {
     if (userError?.message) {
-      showError(userError.message);
+      showError(`Header_userError: ${userError.message}`);
     }
   }, [userError, showError]);
 

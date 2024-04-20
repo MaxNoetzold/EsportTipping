@@ -23,7 +23,7 @@ function GroupMembers({
       return removeMemberFromGroupApi(group._id, userId);
     },
     onError: (error) => {
-      showError(error.message);
+      showError(`GroupMembers_removeMemberError: ${error.message}`);
     },
     onSuccess: () => {
       queryClient.fetchQuery({

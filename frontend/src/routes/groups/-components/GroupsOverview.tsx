@@ -19,7 +19,9 @@ function GroupsOverview() {
   });
 
   useEffect(() => {
-    if (groupsError?.message) showError(groupsError.message);
+    if (groupsError?.message) {
+      showError(`GroupsOverview_groupsError: ${groupsError.message}`);
+    }
   }, [groupsError, showError]);
 
   if (isPending) {

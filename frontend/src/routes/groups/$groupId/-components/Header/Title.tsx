@@ -26,7 +26,7 @@ function GroupTitle({
       }
     },
     onError: (error) => {
-      showError(error.message);
+      showError(`GroupTitle_updateGroupError: ${error.message}`);
     },
     onSuccess: () => {
       queryClient.fetchQuery({ queryKey: ["group", "all"] });

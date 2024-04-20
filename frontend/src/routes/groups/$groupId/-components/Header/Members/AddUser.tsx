@@ -20,7 +20,7 @@ function AddUser({ groupId }: { groupId: string }) {
       return addMemberToGroupApi(groupId, username);
     },
     onError: (error) => {
-      showError(error.message);
+      showError(`AddUser_addMemberError: ${error.message}`);
     },
     onSuccess: () => {
       queryClient.fetchQuery({

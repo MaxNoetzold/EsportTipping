@@ -40,7 +40,7 @@ function LeagueFilter(props: FilterbarProps) {
   });
   useEffect(() => {
     if (tournamentsError) {
-      showError(tournamentsError.message);
+      showError(`LeagueFilter_tournamentError: ${tournamentsError.message}`);
     }
   }, [showError, tournamentsError]);
 

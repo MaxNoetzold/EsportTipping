@@ -35,11 +35,10 @@ function Schedule(props: ScheduleProps) {
 
   useEffect(() => {
     if (matchesError) {
-      console.log(matchesError);
-      showError(matchesError.message);
+      showError(`Schedule_matchesError: ${matchesError.message}`);
     }
     if (tipsError) {
-      showError(tipsError.message);
+      showError(`Schedule_tipsError: ${tipsError.message}`);
     }
   }, [matchesError, tipsError, showError]);
 

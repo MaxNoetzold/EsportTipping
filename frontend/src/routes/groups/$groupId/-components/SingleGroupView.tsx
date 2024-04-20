@@ -43,10 +43,10 @@ function SingleGroupView() {
   // Display errors of querys
   useEffect(() => {
     if (groupInfoError?.message) {
-      showError(groupInfoError.message);
+      showError(`SingleGroupView_groupInfoError: ${groupInfoError.message}`);
     }
     if (groupTipsError?.message) {
-      showError(groupTipsError.message);
+      showError(`SingleGroupView_groupTipsError: ${groupTipsError.message}`);
     }
   }, [groupInfoError, groupTipsError, showError]);
 
