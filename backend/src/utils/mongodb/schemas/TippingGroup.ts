@@ -11,7 +11,6 @@ const TippingGroupSchema = new Schema({
       role: { type: String, default: "player" },
     },
   ],
-  league: { type: String, required: true },
 });
 
 const TippingGroupModel = mongoose.model("TippingGroup", TippingGroupSchema);

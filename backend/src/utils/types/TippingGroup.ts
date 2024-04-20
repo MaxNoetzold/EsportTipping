@@ -13,7 +13,6 @@ export type TippingGroup = {
   ownerName?: string;
   name: string;
   members: Member[];
-  league: string;
 };
 
 export type DetailedTippingGroup = TippingGroup & {

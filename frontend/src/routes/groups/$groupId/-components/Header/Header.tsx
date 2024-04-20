@@ -1,14 +1,29 @@
 import { useQuery } from "@tanstack/react-query";
 import getMeApi from "../../../../../api/getMeApi";
-import { DetailedTippingGroup } from "../../../../../types/TippingGroup";
+import { TippingGroup } from "../../../../../types/TippingGroup";
 import { Navigate } from "@tanstack/react-router";
 import { useErrorSnackbar } from "../../../../../components/ErrorSnackbar";
 import { useEffect } from "react";
 import GroupTitle from "./Title";
 import GroupDeleteButton from "./DeleteButton";
 import GroupMembers from "./Members";
+import LeagueFilter from "../../../../../components/LeagueFilter";
 
-function Header({ group }: { group: DetailedTippingGroup }) {
+type HeaderProps = {
+  group: TippingGroup;
+  league: string | undefined;
+  setLeague: (league: string) => void;
+  tournament: string | undefined;
+  setTournament: (tournament: string | undefined) => void;
+};
+
+function Header({
+  group,
+  league,
+  tournament,
+  setLeague,
+  setTournament,
+}: HeaderProps) {
   const showError = useErrorSnackbar();
 
   const { data: user, error: userError } = useQuery({
@@ -35,7 +50,12 @@ function Header({ group }: { group: DetailedTippingGroup }) {
         <GroupTitle group={group} isAdmin={isAdmin} />
         {isAdmin && <GroupDeleteButton groupId={group._id} />}
       </div>
-      <p>League: {group.league}</p>
+      <LeagueFilter
+        league={league}
+        setLeague={setLeague}
+        tournament={tournament}
+        setTournament={setTournament}
+      />
       <GroupMembers group={group} isAdmin={isAdmin} />
     </div>
   );

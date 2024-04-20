@@ -11,7 +11,6 @@ function CreateNewGroup() {
 
   const [showModal, setShowModal] = useState(false);
   const [groupName, setGroupName] = useState("");
-  const [league, setLeague] = useState("lec");
 
   const modalRef = useRef(null);
   useOnClickOutside(modalRef, () => setShowModal(false));
@@ -25,7 +24,7 @@ function CreateNewGroup() {
   };
 
   const createGroup = useMutation({
-    mutationFn: () => createGroupApi(groupName, league),
+    mutationFn: () => createGroupApi(groupName),
     onMutate: () => {
       if (!groupName) {
         throw new Error("Group name is required");
@@ -63,14 +62,6 @@ function CreateNewGroup() {
           placeholder="Group Name"
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
-        <select
-          value={league}
-          onChange={(e) => setLeague(e.target.value)}
-          className="block appearance-none w-full bg-white border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        >
-          <option value="lec">LEC</option>
-          {/* Add more options as needed */}
-        </select>
       </Modal>
     </>
   );

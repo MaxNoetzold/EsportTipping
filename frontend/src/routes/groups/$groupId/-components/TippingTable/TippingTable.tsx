@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { DetailedTippingGroup } from "../../../../../types/TippingGroup";
+import { GroupTips, TippingGroup } from "../../../../../types/TippingGroup";
 import getMatchesApi from "../../../../../api/getMatchesApi";
 import Loading from "../../../../../components/Loading";
 import { useErrorSnackbar } from "../../../../../components/ErrorSnackbar";
@@ -7,7 +7,17 @@ import { useEffect } from "react";
 import TeamHeader from "./TeamHeader";
 import TipCell from "./TipCell";
 
-function TippingTable({ group }: { group: DetailedTippingGroup }) {
+function TippingTable({
+  group,
+  tips,
+  league,
+  tournament,
+}: {
+  group: TippingGroup;
+  tips: GroupTips;
+  league: string | undefined;
+  tournament: string | undefined;
+}) {
   const showError = useErrorSnackbar();
 
   const {
@@ -15,8 +25,9 @@ function TippingTable({ group }: { group: DetailedTippingGroup }) {
     data: matches = [],
     error: matchesError,
   } = useQuery({
-    queryKey: ["matches", group.league],
-    queryFn: () => getMatchesApi({ league: group.league }),
+    enabled: !!league,
+    queryKey: ["matches", league, tournament],
+    queryFn: () => getMatchesApi({ league, tournament }),
   });
 
   useEffect(() => {
@@ -43,7 +54,7 @@ function TippingTable({ group }: { group: DetailedTippingGroup }) {
           </tr>
         </thead>
         <tbody>
-          {Object.entries(group.tips).map(([userId, tips]) => {
+          {Object.entries(tips).map(([userId, tipsOfUser]) => {
             return (
               <tr key={userId}>
                 <td className="border px-4 py-2">
@@ -53,7 +64,11 @@ function TippingTable({ group }: { group: DetailedTippingGroup }) {
                         ?.userName}
                 </td>
                 {matches.map((match, index) => (
-                  <TipCell key={index} tips={tips} matchId={match.matchId} />
+                  <TipCell
+                    key={index}
+                    tips={tipsOfUser}
+                    matchId={match.matchId}
+                  />
                 ))}
               </tr>
             );

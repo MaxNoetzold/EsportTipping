@@ -42,7 +42,6 @@ function GroupsOverview() {
           >
             <h2 className="text-xl font-bold">{group.name}</h2>
             <p>Owner: {group.ownerName}</p>
-            <p>League: {group.league}</p>
             <p>
               Members:{" "}
               {group.members.reduce((names, member, index) => {

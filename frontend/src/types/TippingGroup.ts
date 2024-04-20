@@ -15,8 +15,6 @@ export type TippingGroup = {
   league: string;
 };
 
-export type DetailedTippingGroup = TippingGroup & {
-  tips: {
-    [userId: string]: MatchTip[];
-  };
+export type GroupTips = {
+  [userId: string]: MatchTip[];
 };

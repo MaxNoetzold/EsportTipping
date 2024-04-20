@@ -45,12 +45,11 @@ tippingGroupRouter.post(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { discordUserId } = (req as AuthedRequest).user;
-      const { name, league } = req.body;
+      const { name } = req.body;
 
       const newGroup = new TippingGroupModel({
         owner: discordUserId,
         members: [],
-        league,
         name,
       });
       await newGroup.save();
@@ -109,7 +108,7 @@ tippingGroupRouter.delete(
   }
 );
 
-// get a specific group and all tips for all members
+// Route to get basic group information
 tippingGroupRouter.get(
   "/:groupId",
   userCheckMiddleware,
@@ -117,20 +116,49 @@ tippingGroupRouter.get(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
       const { groupId } = req.params;
+      const group = await TippingGroupModel.findById(groupId).lean();
+
+      if (!group) {
+        return res.status(404).json({ message: "Group not found" });
+      }
+
+      const groupWithReadableUsers = await makeGroupUsersReadable(group);
+      res.status(200).json(groupWithReadableUsers);
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
+// Route to get tips of group members
+tippingGroupRouter.get(
+  "/:groupId/tips",
+  userCheckMiddleware,
+  groupCheckMiddleware,
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { groupId } = req.params;
+      const { league, tournament } = req.query as {
+        league?: string;
+        tournament?: string;
+      };
+
+      if (!league || !tournament) {
+        throw new Error("League or tournament are required");
+      }
 
       const group = await TippingGroupModel.findById(groupId).lean();
 
       if (!group) {
         return res.status(404).json({ message: "Group not found" });
       }
-      const groupWithReadableUsers = await makeGroupUsersReadable(group);
+
       const userIds = [group.owner, ...group.members.map((m) => m.userId)];
+      const splitName: string =
+        tournament ?? (await getLatestSplitForLeague(league));
+      const tips = await getTipsOfUsers(userIds, splitName);
 
-      // Todo make it a param in the future
-      const latestSplit = await getLatestSplitForLeague(group.league);
-      const tips = await getTipsOfUsers(userIds, latestSplit);
-
-      res.status(200).json({ ...groupWithReadableUsers, tips });
+      res.status(200).json(tips);
     } catch (error) {
       next(error);
     }

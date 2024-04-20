@@ -1,17 +1,26 @@
-import { DetailedTippingGroup } from "../../../../../types/TippingGroup";
+import { GroupTips, TippingGroup } from "../../../../../types/TippingGroup";
 import getMatchesApi from "../../../../../api/getMatchesApi";
 import { useQuery } from "@tanstack/react-query";
 
-function TippingStats({ group }: { group: DetailedTippingGroup }) {
-  const { tips } = group;
-
+function TippingStats({
+  group,
+  tips,
+  league,
+  tournament,
+}: {
+  group: TippingGroup;
+  tips: GroupTips;
+  league: string | undefined;
+  tournament: string | undefined;
+}) {
   const {
     isPending: matchesIsPending,
     data: matches = [],
     error: matchesError,
   } = useQuery({
-    queryKey: ["matches", group.league],
-    queryFn: () => getMatchesApi({ league: group.league }),
+    enabled: !!league,
+    queryKey: ["matches", league, tournament],
+    queryFn: () => getMatchesApi({ league, tournament }),
   });
 
   if (matchesIsPending || matchesError) {
