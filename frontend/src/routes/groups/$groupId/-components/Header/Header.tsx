@@ -55,6 +55,7 @@ function Header({
         setLeague={setLeague}
         tournament={tournament}
         setTournament={setTournament}
+        orientation="horizontal"
       />
       <GroupMembers group={group} isAdmin={isAdmin} />
     </div>
