@@ -8,21 +8,29 @@ import { useErrorSnackbar } from "../../components/ErrorSnackbar";
 import { useEffect } from "react";
 import isNextMatch from "./isNextMatch";
 
-function Schedule() {
+type ScheduleProps = {
+  league: string | undefined;
+  tournament: string | undefined;
+};
+
+function Schedule(props: ScheduleProps) {
   const showError = useErrorSnackbar();
+
+  const { league, tournament } = props;
 
   const {
     isPending,
     data: matches,
     error: matchesError,
   } = useQuery({
-    queryKey: ["matches", "lec"],
-    queryFn: () => getMatchesApi({ league: "lec" }),
+    enabled: !!league,
+    queryKey: ["matches", league, tournament],
+    queryFn: () => getMatchesApi({ league, tournament }),
   });
   const { data: tips, error: tipsError } = useQuery({
-    queryKey: ["tips", "lec_spring_2024", "me"],
-    queryFn: () =>
-      getMatchTipsApi({ league: "lec", tournament: "lec_spring_2024" }),
+    enabled: !!league,
+    queryKey: ["tips", "me", league, tournament],
+    queryFn: () => getMatchTipsApi({ league, tournament }),
   });
 
   useEffect(() => {
@@ -45,7 +53,7 @@ function Schedule() {
   });
 
   return (
-    <div className="w-full">
+    <>
       {matchesWithTips.map((match: IGameEvent) => (
         <MatchElement
           match={match}
@@ -53,7 +61,7 @@ function Schedule() {
           key={match.matchId}
         />
       ))}
-    </div>
+    </>
   );
 }
 
